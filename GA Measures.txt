@@ -1,0 +1,2465 @@
+measure: Users {           # field: users
+  type: number
+  sql: ${TABLE}.users ;;
+}
+
+measure: Sessions {           # field: Sessions
+  type: number
+  sql: ${TABLE}.Sessions ;;
+}
+
+measure: New users {           # field: newvisits
+  type: number
+  sql: ${TABLE}.newvisits ;;
+}
+
+measure: Bounces {           # field: Bounces
+  type: number
+  sql: ${TABLE}.Bounces ;;
+}
+
+measure: Pageviews {           # field: Pageviews
+  type: number
+  sql: ${TABLE}.Pageviews ;;
+}
+
+measure: Total time on site (seconds) {           # field: sessionDuration
+  type: sum
+  sql: ${TABLE}.sessionDuration ;;
+}
+
+measure: Total time on site (hours) {           # field: TimeOnSite_hours
+  type: sum
+  sql: ${TABLE}.TimeOnSite_hours ;;
+}
+
+measure: Bounce rate (%) {           # field: entrancebouncerate_perc
+  type: number
+  sql: ${TABLE}.entrancebouncerate_perc ;;
+}
+
+measure: New sessions (%) {           # field: percentnewvisits_perc
+  type: number
+  sql: ${TABLE}.percentnewvisits_perc ;;
+}
+
+measure: Avg. sessions per user {           # field: AvgVisits
+  type: average
+  sql: ${TABLE}.AvgVisits ;;
+}
+
+measure: Avg. session length (min) {           # field: AvgTimeOnSite_minutes
+  type: average
+  sql: ${TABLE}.AvgTimeOnSite_minutes ;;
+}
+
+measure: Avg. session length (h:m:s) {           # field: AvgTimeOnSite_hms
+  type: average
+  sql: ${TABLE}.AvgTimeOnSite_hms ;;
+}
+
+measure: Avg. session length (seconds) {           # field: average_session_length_seconds
+  type: average
+  sql: ${TABLE}.average_session_length_seconds ;;
+}
+
+measure: Avg. pageviews per session {           # field: pageviewspervisit
+  type: average
+  sql: ${TABLE}.pageviewspervisit ;;
+}
+
+measure: Hits {           # field: hits
+  type: number
+  sql: ${TABLE}.hits ;;
+}
+
+measure: 1 day active users {           # field: 1dayUsers
+  type: number
+  sql: ${TABLE}.1dayUsers ;;
+}
+
+measure: 7 day active users {           # field: 7dayUsers
+  type: number
+  sql: ${TABLE}.7dayUsers ;;
+}
+
+measure: 14 day active users {           # field: 14dayUsers
+  type: number
+  sql: ${TABLE}.14dayUsers ;;
+}
+
+measure: 28 day active users {           # field: 28dayUsers
+  type: number
+  sql: ${TABLE}.28dayUsers ;;
+}
+
+measure: 30 day active users {           # field: 30dayUsers
+  type: number
+  sql: ${TABLE}.30dayUsers ;;
+}
+
+measure: Transactions {           # field: Transactions
+  type: number
+  sql: ${TABLE}.Transactions ;;
+}
+
+measure: Transaction revenue {           # field: TransactionRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.TransactionRevenue ;;
+}
+
+measure: Item revenue {           # field: ItemRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.ItemRevenue ;;
+}
+
+measure: Item quantity {           # field: ItemQuantity
+  type: number
+  sql: ${TABLE}.ItemQuantity ;;
+}
+
+measure: Transaction shipping {           # field: Transactionshipping
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.Transactionshipping ;;
+}
+
+measure: Transaction tax {           # field: Transactiontax
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.Transactiontax ;;
+}
+
+measure: Unique purchases {           # field: Uniquepurchases
+  type: number
+  sql: ${TABLE}.Uniquepurchases ;;
+}
+
+measure: Avg. revenue per user {           # field: revenuePerUser
+  type: average
+  value_format: "$0.00"
+  sql: ${TABLE}.revenuePerUser ;;
+}
+
+measure: Avg. revenue per item {           # field: revenuePerItem
+  type: average
+  value_format: "$0.00"
+  sql: ${TABLE}.revenuePerItem ;;
+}
+
+measure: Avg. revenue per session {           # field: transactionrevenuepervisit
+  type: average
+  value_format: "$0.00"
+  sql: ${TABLE}.transactionrevenuepervisit ;;
+}
+
+measure: Avg. order value {           # field: revenuepertransaction
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.revenuepertransaction ;;
+}
+
+measure: Items per purchase {           # field: itemsPerPurchase
+  type: number
+  sql: ${TABLE}.itemsPerPurchase ;;
+}
+
+measure: Ecommerce conversion rate (%) {           # field: EcommerceConversionRate_perc
+  type: number
+  sql: ${TABLE}.EcommerceConversionRate_perc ;;
+}
+
+measure: Item revenue (local currency) {           # field: localItemRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.localItemRevenue ;;
+}
+
+measure: Transaction revenue (local currency) {           # field: localTransactionRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.localTransactionRevenue ;;
+}
+
+measure: Transaction shipping (local currency) {           # field: localTransactionShipping
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.localTransactionShipping ;;
+}
+
+measure: Transaction tax (local currency) {           # field: localTransactionTax
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.localTransactionTax ;;
+}
+
+measure: Product List Views {           # field: productListViews
+  type: number
+  sql: ${TABLE}.productListViews ;;
+}
+
+measure: Product List Clicks {           # field: productListClicks
+  type: number
+  sql: ${TABLE}.productListClicks ;;
+}
+
+measure: Product List CTR (%) {           # field: productListCTR_perc
+  type: number
+  sql: ${TABLE}.productListCTR_perc ;;
+}
+
+measure: Product Detail Views {           # field: productDetailViews
+  type: number
+  sql: ${TABLE}.productDetailViews ;;
+}
+
+measure: Product Adds To Cart {           # field: productAddsToCart
+  type: number
+  sql: ${TABLE}.productAddsToCart ;;
+}
+
+measure: Product Removes From Cart {           # field: productRemovesFromCart
+  type: number
+  sql: ${TABLE}.productRemovesFromCart ;;
+}
+
+measure: Product Checkouts {           # field: productCheckouts
+  type: number
+  sql: ${TABLE}.productCheckouts ;;
+}
+
+measure: Product Refunds {           # field: productRefunds
+  type: number
+  sql: ${TABLE}.productRefunds ;;
+}
+
+measure: Product Refund Amount {           # field: productRefundAmount
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.productRefundAmount ;;
+}
+
+measure: Product Revenue per Purchase {           # field: productRevenuePerPurchase
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.productRevenuePerPurchase ;;
+}
+
+measure: Cart-to-Detail Rate (%) {           # field: cartToDetailRate_perc
+  type: number
+  sql: ${TABLE}.cartToDetailRate_perc ;;
+}
+
+measure: Buy-to-Detail Rate (%) {           # field: buyToDetailRate_perc
+  type: number
+  sql: ${TABLE}.buyToDetailRate_perc ;;
+}
+
+measure: Quantity Added To Cart {           # field: quantityAddedToCart
+  type: number
+  sql: ${TABLE}.quantityAddedToCart ;;
+}
+
+measure: Quantity Removed From Cart {           # field: quantityRemovedFromCart
+  type: number
+  sql: ${TABLE}.quantityRemovedFromCart ;;
+}
+
+measure: Quantity Checked Out {           # field: quantityCheckedOut
+  type: number
+  sql: ${TABLE}.quantityCheckedOut ;;
+}
+
+measure: Quantity Refunded {           # field: quantityRefunded
+  type: number
+  sql: ${TABLE}.quantityRefunded ;;
+}
+
+measure: Refunds {           # field: totalRefunds
+  type: number
+  sql: ${TABLE}.totalRefunds ;;
+}
+
+measure: Refund Amount {           # field: refundAmount
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.refundAmount ;;
+}
+
+measure: Local Product Refund Amount {           # field: localProductRefundAmount
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.localProductRefundAmount ;;
+}
+
+measure: Local Refund Amount {           # field: localRefundAmount
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.localRefundAmount ;;
+}
+
+measure: Internal Promotion Clicks {           # field: internalPromotionClicks
+  type: number
+  sql: ${TABLE}.internalPromotionClicks ;;
+}
+
+measure: Internal Promotion Views {           # field: internalPromotionViews
+  type: number
+  sql: ${TABLE}.internalPromotionViews ;;
+}
+
+measure: Internal Promotion CTR (%) {           # field: internalPromotionCTR_perc
+  type: number
+  sql: ${TABLE}.internalPromotionCTR_perc ;;
+}
+
+measure: Pageviews {           # field: Pageviews2
+  type: number
+  sql: ${TABLE}.Pageviews2 ;;
+}
+
+measure: Unique pageviews {           # field: UniquePageviews
+  type: number
+  sql: ${TABLE}.UniquePageviews ;;
+}
+
+measure: Entrances {           # field: Entrances
+  type: number
+  sql: ${TABLE}.Entrances ;;
+}
+
+measure: Exits {           # field: Exits
+  type: number
+  sql: ${TABLE}.Exits ;;
+}
+
+measure: Total time on page (sec) {           # field: TimeOnPage
+  type: number
+  sql: ${TABLE}.TimeOnPage ;;
+}
+
+measure: Avg. time on page (sec) {           # field: avgtimeonpage
+  type: average
+  sql: ${TABLE}.avgtimeonpage ;;
+}
+
+measure: Exit rate (%) {           # field: exitrate_perc
+  type: number
+  sql: ${TABLE}.exitrate_perc ;;
+}
+
+measure: Page value {           # field: pageValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.pageValue ;;
+}
+
+measure: Content group 1 unique views {           # field: contentGroupUniqueViews1
+  type: number
+  sql: ${TABLE}.contentGroupUniqueViews1 ;;
+}
+
+measure: Content group 2 unique views {           # field: contentGroupUniqueViews2
+  type: number
+  sql: ${TABLE}.contentGroupUniqueViews2 ;;
+}
+
+measure: Content group 3 unique views {           # field: contentGroupUniqueViews3
+  type: number
+  sql: ${TABLE}.contentGroupUniqueViews3 ;;
+}
+
+measure: Content group 4 unique views {           # field: contentGroupUniqueViews4
+  type: number
+  sql: ${TABLE}.contentGroupUniqueViews4 ;;
+}
+
+measure: Content group 5 unique views {           # field: contentGroupUniqueViews5
+  type: number
+  sql: ${TABLE}.contentGroupUniqueViews5 ;;
+}
+
+measure: Total events {           # field: TotalEvents
+  type: number
+  sql: ${TABLE}.TotalEvents ;;
+}
+
+measure: Unique events {           # field: UniqueEvents
+  type: number
+  sql: ${TABLE}.UniqueEvents ;;
+}
+
+measure: Unique dimension combinations {           # field: uniqueDimensionCombinations
+  type: number
+  sql: ${TABLE}.uniqueDimensionCombinations ;;
+}
+
+measure: Sessions with event {           # field: sessionsWithEvent
+  type: number
+  sql: ${TABLE}.sessionsWithEvent ;;
+}
+
+measure: Event value {           # field: EventValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.EventValue ;;
+}
+
+measure: Avg. event value {           # field: avgeventvalue
+  type: average
+  value_format: "$0.00"
+  sql: ${TABLE}.avgeventvalue ;;
+}
+
+measure: Avg. events per session with event {           # field: eventspervisitwithevent
+  type: average
+  sql: ${TABLE}.eventspervisitwithevent ;;
+}
+
+measure: Ad Impressions {           # field: Impressions
+  type: number
+  sql: ${TABLE}.Impressions ;;
+}
+
+measure: Ad clicks {           # field: AdClicks
+  type: number
+  sql: ${TABLE}.AdClicks ;;
+}
+
+measure: Ad cost {           # field: AdCost
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.AdCost ;;
+}
+
+measure: CPC {           # field: cpc
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.cpc ;;
+}
+
+measure: CPM {           # field: cpm
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.cpm ;;
+}
+
+measure: CTR {           # field: ctr
+  type: number
+  sql: ${TABLE}.ctr ;;
+}
+
+measure: Avg. revenue per ad click (RPC) {           # field: rpc
+  type: average
+  value_format: "$0.00"
+  sql: ${TABLE}.rpc ;;
+}
+
+measure: Return on ad spend (ROAS) (%) {           # field: roas_perc
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.roas_perc ;;
+}
+
+measure: Total conversions {           # field: mcf:totalConversions
+  type: number
+  sql: ${TABLE}.mcf:totalConversions ;;
+}
+
+measure: Total conversion value {           # field: mcf:totalConversionValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.mcf:totalConversionValue ;;
+}
+
+measure: Assisted conversions {           # field: mcf:assistedConversions
+  type: number
+  sql: ${TABLE}.mcf:assistedConversions ;;
+}
+
+measure: Assisted conversion value {           # field: mcf:assistedValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.mcf:assistedValue ;;
+}
+
+measure: First interaction conversions {           # field: mcf:firstInteractionConversions
+  type: number
+  sql: ${TABLE}.mcf:firstInteractionConversions ;;
+}
+
+measure: First interaction conversion value {           # field: mcf:firstInteractionValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.mcf:firstInteractionValue ;;
+}
+
+measure: Last interaction conversions {           # field: mcf:lastInteractionConversions
+  type: number
+  sql: ${TABLE}.mcf:lastInteractionConversions ;;
+}
+
+measure: Last interaction conversion value {           # field: mcf:lastInteractionValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.mcf:lastInteractionValue ;;
+}
+
+measure: Assisted/Last click conversions ratio {           # field: mcf:assistedToLastClickRatio
+  type: number
+  sql: ${TABLE}.mcf:assistedToLastClickRatio ;;
+}
+
+measure: AdSense ads viewed {           # field: adsenseAdsViewed
+  type: number
+  sql: ${TABLE}.adsenseAdsViewed ;;
+}
+
+measure: AdSense ad units viewed {           # field: adsenseAdUnitsViewed
+  type: number
+  sql: ${TABLE}.adsenseAdUnitsViewed ;;
+}
+
+measure: AdSense page impressions {           # field: adsensePageImpressions
+  type: number
+  sql: ${TABLE}.adsensePageImpressions ;;
+}
+
+measure: AdSense clicks {           # field: adsenseAdsClicks
+  type: number
+  sql: ${TABLE}.adsenseAdsClicks ;;
+}
+
+measure: AdSense revenue {           # field: adsenseRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.adsenseRevenue ;;
+}
+
+measure: AdSense CTR {           # field: adsenseCTR
+  type: number
+  sql: ${TABLE}.adsenseCTR ;;
+}
+
+measure: AdSense eCPM {           # field: adsenseECPM
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.adsenseECPM ;;
+}
+
+measure: AdSense exits {           # field: adsenseExits
+  type: number
+  sql: ${TABLE}.adsenseExits ;;
+}
+
+measure: AdX revenue {           # field: adxRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.adxRevenue ;;
+}
+
+measure: Social actions (onsite) {           # field: socialInteractions
+  type: number
+  sql: ${TABLE}.socialInteractions ;;
+}
+
+measure: Unique social actions (onsite) {           # field: uniqueSocialInteractions
+  type: number
+  sql: ${TABLE}.uniqueSocialInteractions ;;
+}
+
+measure: Search uniques {           # field: Searchuniques
+  type: number
+  sql: ${TABLE}.Searchuniques ;;
+}
+
+measure: Search sessions {           # field: searchSessions
+  type: number
+  sql: ${TABLE}.searchSessions ;;
+}
+
+measure: Search result views {           # field: searchResultViews
+  type: number
+  sql: ${TABLE}.searchResultViews ;;
+}
+
+measure: Search refinements {           # field: searchRefinements
+  type: number
+  sql: ${TABLE}.searchRefinements ;;
+}
+
+measure: Search exits {           # field: searchExits
+  type: number
+  sql: ${TABLE}.searchExits ;;
+}
+
+measure: Avg. search pageviews {           # field: avgsearchresultviews
+  type: average
+  sql: ${TABLE}.avgsearchresultviews ;;
+}
+
+measure: Search depth {           # field: searchDepth
+  type: number
+  sql: ${TABLE}.searchDepth ;;
+}
+
+measure: Avg. search depth {           # field: avgsearchdepth
+  type: average
+  sql: ${TABLE}.avgsearchdepth ;;
+}
+
+measure: Avg. search duration {           # field: avgsearchduration
+  type: average
+  sql: ${TABLE}.avgsearchduration ;;
+}
+
+measure: Search exit rate (%) {           # field: searchexitrate_perc
+  type: number
+  sql: ${TABLE}.searchexitrate_perc ;;
+}
+
+measure: Percent of sessions with search {           # field: percentvisitswithsearch
+  type: number
+  sql: ${TABLE}.percentvisitswithsearch ;;
+}
+
+measure: Avg. page load time (sec) {           # field: avgpageloadtime
+  type: average
+  sql: ${TABLE}.avgpageloadtime ;;
+}
+
+measure: Avg. domain lookup time (sec) {           # field: avgdomainlookuptime
+  type: average
+  sql: ${TABLE}.avgdomainlookuptime ;;
+}
+
+measure: Avg. page download time (sec) {           # field: avgpagedownloadtime
+  type: average
+  sql: ${TABLE}.avgpagedownloadtime ;;
+}
+
+measure: Avg. redirection time (sec) {           # field: avgredirectiontime
+  type: average
+  sql: ${TABLE}.avgredirectiontime ;;
+}
+
+measure: Avg. server connection time (sec) {           # field: avgserverconnectiontime
+  type: average
+  sql: ${TABLE}.avgserverconnectiontime ;;
+}
+
+measure: Avg. server response time (sec) {           # field: avgserverresponsetime
+  type: average
+  sql: ${TABLE}.avgserverresponsetime ;;
+}
+
+measure: Page load sample {           # field: pageLoadSample
+  type: number
+  sql: ${TABLE}.pageLoadSample ;;
+}
+
+measure: Sample size {           # field: speedMetricsSample
+  type: number
+  sql: ${TABLE}.speedMetricsSample ;;
+}
+
+measure: DOM content loaded time (ms) {           # field: domContentLoadedTime
+  type: number
+  sql: ${TABLE}.domContentLoadedTime ;;
+}
+
+measure: DOM interactive time (ms) {           # field: domInteractiveTime
+  type: number
+  sql: ${TABLE}.domInteractiveTime ;;
+}
+
+measure: Avg. DOM content loaded time (s) {           # field: avgdomContentLoadedTime
+  type: number
+  sql: ${TABLE}.avgdomContentLoadedTime ;;
+}
+
+measure: Avg. DOM interactive time (s) {           # field: avgDomInteractiveTime
+  type: number
+  sql: ${TABLE}.avgDomInteractiveTime ;;
+}
+
+measure: DOM latency metric sample {           # field: domLatencyMetricsSample
+  type: number
+  sql: ${TABLE}.domLatencyMetricsSample ;;
+}
+
+measure: Page load time (ms) {           # field: pageLoadTime
+  type: number
+  sql: ${TABLE}.pageLoadTime ;;
+}
+
+measure: Domain lookup time (ms) {           # field: domainLookupTime
+  type: number
+  sql: ${TABLE}.domainLookupTime ;;
+}
+
+measure: Page download time (ms) {           # field: pageDownloadTime
+  type: number
+  sql: ${TABLE}.pageDownloadTime ;;
+}
+
+measure: Redirection time (ms) {           # field: redirectionTime
+  type: number
+  sql: ${TABLE}.redirectionTime ;;
+}
+
+measure: Server connection time (ms) {           # field: serverConnectionTime
+  type: number
+  sql: ${TABLE}.serverConnectionTime ;;
+}
+
+measure: Server response time (ms) {           # field: serverResponseTime
+  type: number
+  sql: ${TABLE}.serverResponseTime ;;
+}
+
+measure: Screen views {           # field: screenviews
+  type: number
+  sql: ${TABLE}.screenviews ;;
+}
+
+measure: Unique screen views {           # field: uniqueScreenviews
+  type: number
+  sql: ${TABLE}.uniqueScreenviews ;;
+}
+
+measure: Screen views per session {           # field: screenviewsPerSession
+  type: number
+  sql: ${TABLE}.screenviewsPerSession ;;
+}
+
+measure: Avg. time on screen (sec) {           # field: avgScreenviewDuration
+  type: average
+  sql: ${TABLE}.avgScreenviewDuration ;;
+}
+
+measure: Exceptions {           # field: exceptions
+  type: number
+  sql: ${TABLE}.exceptions ;;
+}
+
+measure: Fatal exceptions {           # field: fatalExceptions
+  type: number
+  sql: ${TABLE}.fatalExceptions ;;
+}
+
+measure: Exceptions per screenview {           # field: exceptionsPerScreenview
+  type: number
+  sql: ${TABLE}.exceptionsPerScreenview ;;
+}
+
+measure: Fatal exceptions per screenview {           # field: fatalExceptionsPerScreenview
+  type: number
+  sql: ${TABLE}.fatalExceptionsPerScreenview ;;
+}
+
+measure: Avg. timing value (sec) {           # field: avgTimingValue
+  type: average
+  sql: ${TABLE}.avgTimingValue ;;
+}
+
+measure: Timing sample size {           # field: userTimingSample
+  type: number
+  sql: ${TABLE}.userTimingSample ;;
+}
+
+measure: Organic searches within a session {           # field: organicSearches
+  type: number
+  sql: ${TABLE}.organicSearches ;;
+}
+
+measure: Goal starts, all goals {           # field: goalStartsAll
+  type: number
+  sql: ${TABLE}.goalStartsAll ;;
+}
+
+measure: Goal completions, all goals {           # field: goalCompletionsAll
+  type: number
+  sql: ${TABLE}.goalCompletionsAll ;;
+}
+
+measure: Goal conversion rate, all goals (%) {           # field: goalconversionrateall_perc
+  type: number
+  sql: ${TABLE}.goalconversionrateall_perc ;;
+}
+
+measure: Total goal value {           # field: GoalValueAll
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.GoalValueAll ;;
+}
+
+measure: Total value (goals + ecommerce) {           # field: totalValue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.totalValue ;;
+}
+
+measure: Avg. goal value per session {           # field: goalvaluepervisit
+  type: average
+  value_format: "$0.00"
+  sql: ${TABLE}.goalvaluepervisit ;;
+}
+
+measure: Goal 1 completions {           # field: goal1completions
+  type: number
+  sql: ${TABLE}.goal1completions ;;
+}
+
+measure: Goal 2 completions {           # field: goal2completions
+  type: number
+  sql: ${TABLE}.goal2completions ;;
+}
+
+measure: Goal 3 completions {           # field: goal3completions
+  type: number
+  sql: ${TABLE}.goal3completions ;;
+}
+
+measure: Goal 4 completions {           # field: goal4completions
+  type: number
+  sql: ${TABLE}.goal4completions ;;
+}
+
+measure: Goal 5 completions {           # field: goal5completions
+  type: number
+  sql: ${TABLE}.goal5completions ;;
+}
+
+measure: Goal 6 completions {           # field: goal6completions
+  type: number
+  sql: ${TABLE}.goal6completions ;;
+}
+
+measure: Goal 7 completions {           # field: goal7completions
+  type: number
+  sql: ${TABLE}.goal7completions ;;
+}
+
+measure: Goal 8 completions {           # field: goal8completions
+  type: number
+  sql: ${TABLE}.goal8completions ;;
+}
+
+measure: Goal 9 completions {           # field: goal9completions
+  type: number
+  sql: ${TABLE}.goal9completions ;;
+}
+
+measure: Goal 10 completions {           # field: goal10completions
+  type: number
+  sql: ${TABLE}.goal10completions ;;
+}
+
+measure: Goal 11 completions {           # field: goal11completions
+  type: number
+  sql: ${TABLE}.goal11completions ;;
+}
+
+measure: Goal 12 completions {           # field: goal12completions
+  type: number
+  sql: ${TABLE}.goal12completions ;;
+}
+
+measure: Goal 13 completions {           # field: goal13completions
+  type: number
+  sql: ${TABLE}.goal13completions ;;
+}
+
+measure: Goal 14 completions {           # field: goal14completions
+  type: number
+  sql: ${TABLE}.goal14completions ;;
+}
+
+measure: Goal 15 completions {           # field: goal15completions
+  type: number
+  sql: ${TABLE}.goal15completions ;;
+}
+
+measure: Goal 16 completions {           # field: goal16completions
+  type: number
+  sql: ${TABLE}.goal16completions ;;
+}
+
+measure: Goal 17 completions {           # field: goal17completions
+  type: number
+  sql: ${TABLE}.goal17completions ;;
+}
+
+measure: Goal 18 completions {           # field: goal18completions
+  type: number
+  sql: ${TABLE}.goal18completions ;;
+}
+
+measure: Goal 19 completions {           # field: goal19completions
+  type: number
+  sql: ${TABLE}.goal19completions ;;
+}
+
+measure: Goal 20 completions {           # field: goal20completions
+  type: number
+  sql: ${TABLE}.goal20completions ;;
+}
+
+measure: Goal 1 conversion rate (%) {           # field: goal1conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal1conversionrate_perc ;;
+}
+
+measure: Goal 2 conversion rate (%) {           # field: goal2conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal2conversionrate_perc ;;
+}
+
+measure: Goal 3 conversion rate (%) {           # field: goal3conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal3conversionrate_perc ;;
+}
+
+measure: Goal 4 conversion rate (%) {           # field: goal4conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal4conversionrate_perc ;;
+}
+
+measure: Goal 5 conversion rate (%) {           # field: goal5conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal5conversionrate_perc ;;
+}
+
+measure: Goal 6 conversion rate (%) {           # field: goal6conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal6conversionrate_perc ;;
+}
+
+measure: Goal 7 conversion rate (%) {           # field: goal7conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal7conversionrate_perc ;;
+}
+
+measure: Goal 8 conversion rate (%) {           # field: goal8conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal8conversionrate_perc ;;
+}
+
+measure: Goal 9 conversion rate (%) {           # field: goal9conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal9conversionrate_perc ;;
+}
+
+measure: Goal 10 conversion rate (%) {           # field: goal10conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal10conversionrate_perc ;;
+}
+
+measure: Goal 11 conversion rate (%) {           # field: goal11conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal11conversionrate_perc ;;
+}
+
+measure: Goal 12 conversion rate (%) {           # field: goal12conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal12conversionrate_perc ;;
+}
+
+measure: Goal 13 conversion rate (%) {           # field: goal13conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal13conversionrate_perc ;;
+}
+
+measure: Goal 14 conversion rate (%) {           # field: goal14conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal14conversionrate_perc ;;
+}
+
+measure: Goal 15 conversion rate (%) {           # field: goal15conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal15conversionrate_perc ;;
+}
+
+measure: Goal 16 conversion rate (%) {           # field: goal16conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal16conversionrate_perc ;;
+}
+
+measure: Goal 17 conversion rate (%) {           # field: goal17conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal17conversionrate_perc ;;
+}
+
+measure: Goal 18 conversion rate (%) {           # field: goal18conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal18conversionrate_perc ;;
+}
+
+measure: Goal 19 conversion rate (%) {           # field: goal19conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal19conversionrate_perc ;;
+}
+
+measure: Goal 20 conversion rate (%) {           # field: goal20conversionrate_perc
+  type: number
+  sql: ${TABLE}.goal20conversionrate_perc ;;
+}
+
+measure: Goal 1 funnel abandon rate (%) {           # field: goal1abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal1abandonrate_perc ;;
+}
+
+measure: Goal 2 funnel abandon rate (%) {           # field: goal2abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal2abandonrate_perc ;;
+}
+
+measure: Goal 3 funnel abandon rate (%) {           # field: goal3abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal3abandonrate_perc ;;
+}
+
+measure: Goal 4 funnel abandon rate (%) {           # field: goal4abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal4abandonrate_perc ;;
+}
+
+measure: Goal 5 funnel abandon rate (%) {           # field: goal5abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal5abandonrate_perc ;;
+}
+
+measure: Goal 6 funnel abandon rate (%) {           # field: goal6abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal6abandonrate_perc ;;
+}
+
+measure: Goal 7 funnel abandon rate (%) {           # field: goal7abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal7abandonrate_perc ;;
+}
+
+measure: Goal 8 funnel abandon rate (%) {           # field: goal8abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal8abandonrate_perc ;;
+}
+
+measure: Goal 9 funnel abandon rate (%) {           # field: goal9abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal9abandonrate_perc ;;
+}
+
+measure: Goal 10 funnel abandon rate (%) {           # field: goal10abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal10abandonrate_perc ;;
+}
+
+measure: Goal 11 funnel abandon rate (%) {           # field: goal11abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal11abandonrate_perc ;;
+}
+
+measure: Goal 12 funnel abandon rate (%) {           # field: goal12abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal12abandonrate_perc ;;
+}
+
+measure: Goal 13 funnel abandon rate (%) {           # field: goal13abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal13abandonrate_perc ;;
+}
+
+measure: Goal 14 funnel abandon rate (%) {           # field: goal14abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal14abandonrate_perc ;;
+}
+
+measure: Goal 15 funnel abandon rate (%) {           # field: goal15abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal15abandonrate_perc ;;
+}
+
+measure: Goal 16 funnel abandon rate (%) {           # field: goal16abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal16abandonrate_perc ;;
+}
+
+measure: Goal 17 funnel abandon rate (%) {           # field: goal17abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal17abandonrate_perc ;;
+}
+
+measure: Goal 18 funnel abandon rate (%) {           # field: goal18abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal18abandonrate_perc ;;
+}
+
+measure: Goal 19 funnel abandon rate (%) {           # field: goal19abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal19abandonrate_perc ;;
+}
+
+measure: Goal 20 funnel abandon rate (%) {           # field: goal20abandonrate_perc
+  type: number
+  sql: ${TABLE}.goal20abandonrate_perc ;;
+}
+
+measure: Goal 1 value {           # field: goal1value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal1value ;;
+}
+
+measure: Goal 2 value {           # field: goal2value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal2value ;;
+}
+
+measure: Goal 3 value {           # field: goal3value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal3value ;;
+}
+
+measure: Goal 4 value {           # field: goal4value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal4value ;;
+}
+
+measure: Goal 5 value {           # field: goal5value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal5value ;;
+}
+
+measure: Goal 6 value {           # field: goal6value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal6value ;;
+}
+
+measure: Goal 7 value {           # field: goal7value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal7value ;;
+}
+
+measure: Goal 8 value {           # field: goal8value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal8value ;;
+}
+
+measure: Goal 9 value {           # field: goal9value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal9value ;;
+}
+
+measure: Goal 10 value {           # field: goal10value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal10value ;;
+}
+
+measure: Goal 11 value {           # field: goal11value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal11value ;;
+}
+
+measure: Goal 12 value {           # field: goal12value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal12value ;;
+}
+
+measure: Goal 13 value {           # field: goal13value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal13value ;;
+}
+
+measure: Goal 14 value {           # field: goal14value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal14value ;;
+}
+
+measure: Goal 15 value {           # field: goal15value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal15value ;;
+}
+
+measure: Goal 16 value {           # field: goal16value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal16value ;;
+}
+
+measure: Goal 17 value {           # field: goal17value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal17value ;;
+}
+
+measure: Goal 18 value {           # field: goal18value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal18value ;;
+}
+
+measure: Goal 19 value {           # field: goal19value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal19value ;;
+}
+
+measure: Goal 20 value {           # field: goal20value
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.goal20value ;;
+}
+
+measure: Goal 1 starts {           # field: goal1starts
+  type: number
+  sql: ${TABLE}.goal1starts ;;
+}
+
+measure: Goal 2 starts {           # field: goal2starts
+  type: number
+  sql: ${TABLE}.goal2starts ;;
+}
+
+measure: Goal 3 starts {           # field: goal3starts
+  type: number
+  sql: ${TABLE}.goal3starts ;;
+}
+
+measure: Goal 4 starts {           # field: goal4starts
+  type: number
+  sql: ${TABLE}.goal4starts ;;
+}
+
+measure: Goal 5 starts {           # field: goal5starts
+  type: number
+  sql: ${TABLE}.goal5starts ;;
+}
+
+measure: Goal 6 starts {           # field: goal6starts
+  type: number
+  sql: ${TABLE}.goal6starts ;;
+}
+
+measure: Goal 7 starts {           # field: goal7starts
+  type: number
+  sql: ${TABLE}.goal7starts ;;
+}
+
+measure: Goal 8 starts {           # field: goal8starts
+  type: number
+  sql: ${TABLE}.goal8starts ;;
+}
+
+measure: Goal 9 starts {           # field: goal9starts
+  type: number
+  sql: ${TABLE}.goal9starts ;;
+}
+
+measure: Goal 10 starts {           # field: goal10starts
+  type: number
+  sql: ${TABLE}.goal10starts ;;
+}
+
+measure: Goal 11 starts {           # field: goal11starts
+  type: number
+  sql: ${TABLE}.goal11starts ;;
+}
+
+measure: Goal 12 starts {           # field: goal12starts
+  type: number
+  sql: ${TABLE}.goal12starts ;;
+}
+
+measure: Goal 13 starts {           # field: goal13starts
+  type: number
+  sql: ${TABLE}.goal13starts ;;
+}
+
+measure: Goal 14 starts {           # field: goal14starts
+  type: number
+  sql: ${TABLE}.goal14starts ;;
+}
+
+measure: Goal 15 starts {           # field: goal15starts
+  type: number
+  sql: ${TABLE}.goal15starts ;;
+}
+
+measure: Goal 16 starts {           # field: goal16starts
+  type: number
+  sql: ${TABLE}.goal16starts ;;
+}
+
+measure: Goal 17 starts {           # field: goal17starts
+  type: number
+  sql: ${TABLE}.goal17starts ;;
+}
+
+measure: Goal 18 starts {           # field: goal18starts
+  type: number
+  sql: ${TABLE}.goal18starts ;;
+}
+
+measure: Goal 19 starts {           # field: goal19starts
+  type: number
+  sql: ${TABLE}.goal19starts ;;
+}
+
+measure: Goal 20 starts {           # field: goal20starts
+  type: number
+  sql: ${TABLE}.goal20starts ;;
+}
+
+measure: DBM Impressions {           # field: dbmImpressions
+  type: number
+  sql: ${TABLE}.dbmImpressions ;;
+}
+
+measure: DBM Clicks {           # field: dbmClicks
+  type: number
+  sql: ${TABLE}.dbmClicks ;;
+}
+
+measure: DBM Cost {           # field: dbmCost
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dbmCost ;;
+}
+
+measure: dbmCPA {           # field: dbmCPA
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dbmCPA ;;
+}
+
+measure: dbmCPM {           # field: dbmCPM
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dbmCPM ;;
+}
+
+measure: DBM CTR (%) {           # field: dbmCTR_perc
+  type: number
+  sql: ${TABLE}.dbmCTR_perc ;;
+}
+
+measure: dbmCPC {           # field: dbmCPC
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dbmCPC ;;
+}
+
+measure: DBM Conversions {           # field: dbmConversions
+  type: number
+  sql: ${TABLE}.dbmConversions ;;
+}
+
+measure: DBM Return on ad spend (ROAS) (%) {           # field: dbmROAS_perc
+  type: number
+  sql: ${TABLE}.dbmROAS_perc ;;
+}
+
+measure: DFA Impressions {           # field: dcmImpressions
+  type: number
+  sql: ${TABLE}.dcmImpressions ;;
+}
+
+measure: DFA Clicks {           # field: dcmClicks
+  type: number
+  sql: ${TABLE}.dcmClicks ;;
+}
+
+measure: DFA Cost {           # field: dcmCost
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dcmCost ;;
+}
+
+measure: DFA CTR (%) {           # field: dcmCTR_perc
+  type: number
+  sql: ${TABLE}.dcmCTR_perc ;;
+}
+
+measure: DCM CPC {           # field: dcmCPC
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dcmCPC ;;
+}
+
+measure: DFA Conversions {           # field: dcmFloodlightQuantity
+  type: number
+  sql: ${TABLE}.dcmFloodlightQuantity ;;
+}
+
+measure: DFA Revenue {           # field: dcmFloodlightRevenue
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dcmFloodlightRevenue ;;
+}
+
+measure: DFA ROI (%) {           # field: dcmROI_perc
+  type: number
+  sql: ${TABLE}.dcmROI_perc ;;
+}
+
+measure: SA360 Clicks {           # field: dsClicks
+  type: number
+  sql: ${TABLE}.dsClicks ;;
+}
+
+measure: SA360 Cost {           # field: dsCost
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dsCost ;;
+}
+
+measure: SA360 Impressions {           # field: dsImpressions
+  type: number
+  sql: ${TABLE}.dsImpressions ;;
+}
+
+measure: SA360 CPC {           # field: dsCPC
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dsCPC ;;
+}
+
+measure: SA360 CTR {           # field: dsCTR
+  type: number
+  sql: ${TABLE}.dsCTR ;;
+}
+
+measure: SA360 Profit {           # field: dsProfit
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dsProfit ;;
+}
+
+measure: SA360 ROAS {           # field: dsReturnOnAdSpend
+  type: number
+  sql: ${TABLE}.dsReturnOnAdSpend ;;
+}
+
+measure: SA360 RPC {           # field: dsRevenuePerClick
+  type: number
+  value_format: "$0.00"
+  sql: ${TABLE}.dsRevenuePerClick ;;
+}
+
+measure: Custom metric 1 {           # field: metric1
+  type: number
+  sql: ${TABLE}.metric1 ;;
+}
+
+measure: Custom metric 2 {           # field: metric2
+  type: number
+  sql: ${TABLE}.metric2 ;;
+}
+
+measure: Custom metric 3 {           # field: metric3
+  type: number
+  sql: ${TABLE}.metric3 ;;
+}
+
+measure: Custom metric 4 {           # field: metric4
+  type: number
+  sql: ${TABLE}.metric4 ;;
+}
+
+measure: Custom metric 5 {           # field: metric5
+  type: number
+  sql: ${TABLE}.metric5 ;;
+}
+
+measure: Custom metric 6 {           # field: metric6
+  type: number
+  sql: ${TABLE}.metric6 ;;
+}
+
+measure: Custom metric 7 {           # field: metric7
+  type: number
+  sql: ${TABLE}.metric7 ;;
+}
+
+measure: Custom metric 8 {           # field: metric8
+  type: number
+  sql: ${TABLE}.metric8 ;;
+}
+
+measure: Custom metric 9 {           # field: metric9
+  type: number
+  sql: ${TABLE}.metric9 ;;
+}
+
+measure: Custom metric 10 {           # field: metric10
+  type: number
+  sql: ${TABLE}.metric10 ;;
+}
+
+measure: Custom metric 11 {           # field: metric11
+  type: number
+  sql: ${TABLE}.metric11 ;;
+}
+
+measure: Custom metric 12 {           # field: metric12
+  type: number
+  sql: ${TABLE}.metric12 ;;
+}
+
+measure: Custom metric 13 {           # field: metric13
+  type: number
+  sql: ${TABLE}.metric13 ;;
+}
+
+measure: Custom metric 14 {           # field: metric14
+  type: number
+  sql: ${TABLE}.metric14 ;;
+}
+
+measure: Custom metric 15 {           # field: metric15
+  type: number
+  sql: ${TABLE}.metric15 ;;
+}
+
+measure: Custom metric 16 {           # field: metric16
+  type: number
+  sql: ${TABLE}.metric16 ;;
+}
+
+measure: Custom metric 17 {           # field: metric17
+  type: number
+  sql: ${TABLE}.metric17 ;;
+}
+
+measure: Custom metric 18 {           # field: metric18
+  type: number
+  sql: ${TABLE}.metric18 ;;
+}
+
+measure: Custom metric 19 {           # field: metric19
+  type: number
+  sql: ${TABLE}.metric19 ;;
+}
+
+measure: Custom metric 20 {           # field: metric20
+  type: number
+  sql: ${TABLE}.metric20 ;;
+}
+
+measure: Custom metric 21 {           # field: metric21
+  type: number
+  sql: ${TABLE}.metric21 ;;
+}
+
+measure: Custom metric 22 {           # field: metric22
+  type: number
+  sql: ${TABLE}.metric22 ;;
+}
+
+measure: Custom metric 23 {           # field: metric23
+  type: number
+  sql: ${TABLE}.metric23 ;;
+}
+
+measure: Custom metric 24 {           # field: metric24
+  type: number
+  sql: ${TABLE}.metric24 ;;
+}
+
+measure: Custom metric 25 {           # field: metric25
+  type: number
+  sql: ${TABLE}.metric25 ;;
+}
+
+measure: Custom metric 26 {           # field: metric26
+  type: number
+  sql: ${TABLE}.metric26 ;;
+}
+
+measure: Custom metric 27 {           # field: metric27
+  type: number
+  sql: ${TABLE}.metric27 ;;
+}
+
+measure: Custom metric 28 {           # field: metric28
+  type: number
+  sql: ${TABLE}.metric28 ;;
+}
+
+measure: Custom metric 29 {           # field: metric29
+  type: number
+  sql: ${TABLE}.metric29 ;;
+}
+
+measure: Custom metric 30 {           # field: metric30
+  type: number
+  sql: ${TABLE}.metric30 ;;
+}
+
+measure: Custom metric 31 {           # field: metric31
+  type: number
+  sql: ${TABLE}.metric31 ;;
+}
+
+measure: Custom metric 32 {           # field: metric32
+  type: number
+  sql: ${TABLE}.metric32 ;;
+}
+
+measure: Custom metric 33 {           # field: metric33
+  type: number
+  sql: ${TABLE}.metric33 ;;
+}
+
+measure: Custom metric 34 {           # field: metric34
+  type: number
+  sql: ${TABLE}.metric34 ;;
+}
+
+measure: Custom metric 35 {           # field: metric35
+  type: number
+  sql: ${TABLE}.metric35 ;;
+}
+
+measure: Custom metric 36 {           # field: metric36
+  type: number
+  sql: ${TABLE}.metric36 ;;
+}
+
+measure: Custom metric 37 {           # field: metric37
+  type: number
+  sql: ${TABLE}.metric37 ;;
+}
+
+measure: Custom metric 38 {           # field: metric38
+  type: number
+  sql: ${TABLE}.metric38 ;;
+}
+
+measure: Custom metric 39 {           # field: metric39
+  type: number
+  sql: ${TABLE}.metric39 ;;
+}
+
+measure: Custom metric 40 {           # field: metric40
+  type: number
+  sql: ${TABLE}.metric40 ;;
+}
+
+measure: Custom metric 41 {           # field: metric41
+  type: number
+  sql: ${TABLE}.metric41 ;;
+}
+
+measure: Custom metric 42 {           # field: metric42
+  type: number
+  sql: ${TABLE}.metric42 ;;
+}
+
+measure: Custom metric 43 {           # field: metric43
+  type: number
+  sql: ${TABLE}.metric43 ;;
+}
+
+measure: Custom metric 44 {           # field: metric44
+  type: number
+  sql: ${TABLE}.metric44 ;;
+}
+
+measure: Custom metric 45 {           # field: metric45
+  type: number
+  sql: ${TABLE}.metric45 ;;
+}
+
+measure: Custom metric 46 {           # field: metric46
+  type: number
+  sql: ${TABLE}.metric46 ;;
+}
+
+measure: Custom metric 47 {           # field: metric47
+  type: number
+  sql: ${TABLE}.metric47 ;;
+}
+
+measure: Custom metric 48 {           # field: metric48
+  type: number
+  sql: ${TABLE}.metric48 ;;
+}
+
+measure: Custom metric 49 {           # field: metric49
+  type: number
+  sql: ${TABLE}.metric49 ;;
+}
+
+measure: Custom metric 50 {           # field: metric50
+  type: number
+  sql: ${TABLE}.metric50 ;;
+}
+
+measure: Custom metric 51 {           # field: metric51
+  type: number
+  sql: ${TABLE}.metric51 ;;
+}
+
+measure: Custom metric 52 {           # field: metric52
+  type: number
+  sql: ${TABLE}.metric52 ;;
+}
+
+measure: Custom metric 53 {           # field: metric53
+  type: number
+  sql: ${TABLE}.metric53 ;;
+}
+
+measure: Custom metric 54 {           # field: metric54
+  type: number
+  sql: ${TABLE}.metric54 ;;
+}
+
+measure: Custom metric 55 {           # field: metric55
+  type: number
+  sql: ${TABLE}.metric55 ;;
+}
+
+measure: Custom metric 56 {           # field: metric56
+  type: number
+  sql: ${TABLE}.metric56 ;;
+}
+
+measure: Custom metric 57 {           # field: metric57
+  type: number
+  sql: ${TABLE}.metric57 ;;
+}
+
+measure: Custom metric 58 {           # field: metric58
+  type: number
+  sql: ${TABLE}.metric58 ;;
+}
+
+measure: Custom metric 59 {           # field: metric59
+  type: number
+  sql: ${TABLE}.metric59 ;;
+}
+
+measure: Custom metric 60 {           # field: metric60
+  type: number
+  sql: ${TABLE}.metric60 ;;
+}
+
+measure: Custom metric 61 {           # field: metric61
+  type: number
+  sql: ${TABLE}.metric61 ;;
+}
+
+measure: Custom metric 62 {           # field: metric62
+  type: number
+  sql: ${TABLE}.metric62 ;;
+}
+
+measure: Custom metric 63 {           # field: metric63
+  type: number
+  sql: ${TABLE}.metric63 ;;
+}
+
+measure: Custom metric 64 {           # field: metric64
+  type: number
+  sql: ${TABLE}.metric64 ;;
+}
+
+measure: Custom metric 65 {           # field: metric65
+  type: number
+  sql: ${TABLE}.metric65 ;;
+}
+
+measure: Custom metric 66 {           # field: metric66
+  type: number
+  sql: ${TABLE}.metric66 ;;
+}
+
+measure: Custom metric 67 {           # field: metric67
+  type: number
+  sql: ${TABLE}.metric67 ;;
+}
+
+measure: Custom metric 68 {           # field: metric68
+  type: number
+  sql: ${TABLE}.metric68 ;;
+}
+
+measure: Custom metric 69 {           # field: metric69
+  type: number
+  sql: ${TABLE}.metric69 ;;
+}
+
+measure: Custom metric 70 {           # field: metric70
+  type: number
+  sql: ${TABLE}.metric70 ;;
+}
+
+measure: Custom metric 71 {           # field: metric71
+  type: number
+  sql: ${TABLE}.metric71 ;;
+}
+
+measure: Custom metric 72 {           # field: metric72
+  type: number
+  sql: ${TABLE}.metric72 ;;
+}
+
+measure: Custom metric 73 {           # field: metric73
+  type: number
+  sql: ${TABLE}.metric73 ;;
+}
+
+measure: Custom metric 74 {           # field: metric74
+  type: number
+  sql: ${TABLE}.metric74 ;;
+}
+
+measure: Custom metric 75 {           # field: metric75
+  type: number
+  sql: ${TABLE}.metric75 ;;
+}
+
+measure: Custom metric 76 {           # field: metric76
+  type: number
+  sql: ${TABLE}.metric76 ;;
+}
+
+measure: Custom metric 77 {           # field: metric77
+  type: number
+  sql: ${TABLE}.metric77 ;;
+}
+
+measure: Custom metric 78 {           # field: metric78
+  type: number
+  sql: ${TABLE}.metric78 ;;
+}
+
+measure: Custom metric 79 {           # field: metric79
+  type: number
+  sql: ${TABLE}.metric79 ;;
+}
+
+measure: Custom metric 80 {           # field: metric80
+  type: number
+  sql: ${TABLE}.metric80 ;;
+}
+
+measure: Custom metric 81 {           # field: metric81
+  type: number
+  sql: ${TABLE}.metric81 ;;
+}
+
+measure: Custom metric 82 {           # field: metric82
+  type: number
+  sql: ${TABLE}.metric82 ;;
+}
+
+measure: Custom metric 83 {           # field: metric83
+  type: number
+  sql: ${TABLE}.metric83 ;;
+}
+
+measure: Custom metric 84 {           # field: metric84
+  type: number
+  sql: ${TABLE}.metric84 ;;
+}
+
+measure: Custom metric 85 {           # field: metric85
+  type: number
+  sql: ${TABLE}.metric85 ;;
+}
+
+measure: Custom metric 86 {           # field: metric86
+  type: number
+  sql: ${TABLE}.metric86 ;;
+}
+
+measure: Custom metric 87 {           # field: metric87
+  type: number
+  sql: ${TABLE}.metric87 ;;
+}
+
+measure: Custom metric 88 {           # field: metric88
+  type: number
+  sql: ${TABLE}.metric88 ;;
+}
+
+measure: Custom metric 89 {           # field: metric89
+  type: number
+  sql: ${TABLE}.metric89 ;;
+}
+
+measure: Custom metric 90 {           # field: metric90
+  type: number
+  sql: ${TABLE}.metric90 ;;
+}
+
+measure: Custom metric 91 {           # field: metric91
+  type: number
+  sql: ${TABLE}.metric91 ;;
+}
+
+measure: Custom metric 92 {           # field: metric92
+  type: number
+  sql: ${TABLE}.metric92 ;;
+}
+
+measure: Custom metric 93 {           # field: metric93
+  type: number
+  sql: ${TABLE}.metric93 ;;
+}
+
+measure: Custom metric 94 {           # field: metric94
+  type: number
+  sql: ${TABLE}.metric94 ;;
+}
+
+measure: Custom metric 95 {           # field: metric95
+  type: number
+  sql: ${TABLE}.metric95 ;;
+}
+
+measure: Custom metric 96 {           # field: metric96
+  type: number
+  sql: ${TABLE}.metric96 ;;
+}
+
+measure: Custom metric 97 {           # field: metric97
+  type: number
+  sql: ${TABLE}.metric97 ;;
+}
+
+measure: Custom metric 98 {           # field: metric98
+  type: number
+  sql: ${TABLE}.metric98 ;;
+}
+
+measure: Custom metric 99 {           # field: metric99
+  type: number
+  sql: ${TABLE}.metric99 ;;
+}
+
+measure: Custom metric 100 {           # field: metric100
+  type: number
+  sql: ${TABLE}.metric100 ;;
+}
+
+measure: Custom metric 101 {           # field: metric101
+  type: number
+  sql: ${TABLE}.metric101 ;;
+}
+
+measure: Custom metric 102 {           # field: metric102
+  type: number
+  sql: ${TABLE}.metric102 ;;
+}
+
+measure: Custom metric 103 {           # field: metric103
+  type: number
+  sql: ${TABLE}.metric103 ;;
+}
+
+measure: Custom metric 104 {           # field: metric104
+  type: number
+  sql: ${TABLE}.metric104 ;;
+}
+
+measure: Custom metric 105 {           # field: metric105
+  type: number
+  sql: ${TABLE}.metric105 ;;
+}
+
+measure: Custom metric 106 {           # field: metric106
+  type: number
+  sql: ${TABLE}.metric106 ;;
+}
+
+measure: Custom metric 107 {           # field: metric107
+  type: number
+  sql: ${TABLE}.metric107 ;;
+}
+
+measure: Custom metric 108 {           # field: metric108
+  type: number
+  sql: ${TABLE}.metric108 ;;
+}
+
+measure: Custom metric 109 {           # field: metric109
+  type: number
+  sql: ${TABLE}.metric109 ;;
+}
+
+measure: Custom metric 110 {           # field: metric110
+  type: number
+  sql: ${TABLE}.metric110 ;;
+}
+
+measure: Custom metric 111 {           # field: metric111
+  type: number
+  sql: ${TABLE}.metric111 ;;
+}
+
+measure: Custom metric 112 {           # field: metric112
+  type: number
+  sql: ${TABLE}.metric112 ;;
+}
+
+measure: Custom metric 113 {           # field: metric113
+  type: number
+  sql: ${TABLE}.metric113 ;;
+}
+
+measure: Custom metric 114 {           # field: metric114
+  type: number
+  sql: ${TABLE}.metric114 ;;
+}
+
+measure: Custom metric 115 {           # field: metric115
+  type: number
+  sql: ${TABLE}.metric115 ;;
+}
+
+measure: Custom metric 116 {           # field: metric116
+  type: number
+  sql: ${TABLE}.metric116 ;;
+}
+
+measure: Custom metric 117 {           # field: metric117
+  type: number
+  sql: ${TABLE}.metric117 ;;
+}
+
+measure: Custom metric 118 {           # field: metric118
+  type: number
+  sql: ${TABLE}.metric118 ;;
+}
+
+measure: Custom metric 119 {           # field: metric119
+  type: number
+  sql: ${TABLE}.metric119 ;;
+}
+
+measure: Custom metric 120 {           # field: metric120
+  type: number
+  sql: ${TABLE}.metric120 ;;
+}
+
+measure: Custom metric 121 {           # field: metric121
+  type: number
+  sql: ${TABLE}.metric121 ;;
+}
+
+measure: Custom metric 122 {           # field: metric122
+  type: number
+  sql: ${TABLE}.metric122 ;;
+}
+
+measure: Custom metric 123 {           # field: metric123
+  type: number
+  sql: ${TABLE}.metric123 ;;
+}
+
+measure: Custom metric 124 {           # field: metric124
+  type: number
+  sql: ${TABLE}.metric124 ;;
+}
+
+measure: Custom metric 125 {           # field: metric125
+  type: number
+  sql: ${TABLE}.metric125 ;;
+}
+
+measure: Custom metric 126 {           # field: metric126
+  type: number
+  sql: ${TABLE}.metric126 ;;
+}
+
+measure: Custom metric 127 {           # field: metric127
+  type: number
+  sql: ${TABLE}.metric127 ;;
+}
+
+measure: Custom metric 128 {           # field: metric128
+  type: number
+  sql: ${TABLE}.metric128 ;;
+}
+
+measure: Custom metric 129 {           # field: metric129
+  type: number
+  sql: ${TABLE}.metric129 ;;
+}
+
+measure: Custom metric 130 {           # field: metric130
+  type: number
+  sql: ${TABLE}.metric130 ;;
+}
+
+measure: Custom metric 131 {           # field: metric131
+  type: number
+  sql: ${TABLE}.metric131 ;;
+}
+
+measure: Custom metric 132 {           # field: metric132
+  type: number
+  sql: ${TABLE}.metric132 ;;
+}
+
+measure: Custom metric 133 {           # field: metric133
+  type: number
+  sql: ${TABLE}.metric133 ;;
+}
+
+measure: Custom metric 134 {           # field: metric134
+  type: number
+  sql: ${TABLE}.metric134 ;;
+}
+
+measure: Custom metric 135 {           # field: metric135
+  type: number
+  sql: ${TABLE}.metric135 ;;
+}
+
+measure: Custom metric 136 {           # field: metric136
+  type: number
+  sql: ${TABLE}.metric136 ;;
+}
+
+measure: Custom metric 137 {           # field: metric137
+  type: number
+  sql: ${TABLE}.metric137 ;;
+}
+
+measure: Custom metric 138 {           # field: metric138
+  type: number
+  sql: ${TABLE}.metric138 ;;
+}
+
+measure: Custom metric 139 {           # field: metric139
+  type: number
+  sql: ${TABLE}.metric139 ;;
+}
+
+measure: Custom metric 140 {           # field: metric140
+  type: number
+  sql: ${TABLE}.metric140 ;;
+}
+
+measure: Custom metric 141 {           # field: metric141
+  type: number
+  sql: ${TABLE}.metric141 ;;
+}
+
+measure: Custom metric 142 {           # field: metric142
+  type: number
+  sql: ${TABLE}.metric142 ;;
+}
+
+measure: Custom metric 143 {           # field: metric143
+  type: number
+  sql: ${TABLE}.metric143 ;;
+}
+
+measure: Custom metric 144 {           # field: metric144
+  type: number
+  sql: ${TABLE}.metric144 ;;
+}
+
+measure: Custom metric 145 {           # field: metric145
+  type: number
+  sql: ${TABLE}.metric145 ;;
+}
+
+measure: Custom metric 146 {           # field: metric146
+  type: number
+  sql: ${TABLE}.metric146 ;;
+}
+
+measure: Custom metric 147 {           # field: metric147
+  type: number
+  sql: ${TABLE}.metric147 ;;
+}
+
+measure: Custom metric 148 {           # field: metric148
+  type: number
+  sql: ${TABLE}.metric148 ;;
+}
+
+measure: Custom metric 149 {           # field: metric149
+  type: number
+  sql: ${TABLE}.metric149 ;;
+}
+
+measure: Custom metric 150 {           # field: metric150
+  type: number
+  sql: ${TABLE}.metric150 ;;
+}
+
+measure: Custom metric 151 {           # field: metric151
+  type: number
+  sql: ${TABLE}.metric151 ;;
+}
+
+measure: Custom metric 152 {           # field: metric152
+  type: number
+  sql: ${TABLE}.metric152 ;;
+}
+
+measure: Custom metric 153 {           # field: metric153
+  type: number
+  sql: ${TABLE}.metric153 ;;
+}
+
+measure: Custom metric 154 {           # field: metric154
+  type: number
+  sql: ${TABLE}.metric154 ;;
+}
+
+measure: Custom metric 155 {           # field: metric155
+  type: number
+  sql: ${TABLE}.metric155 ;;
+}
+
+measure: Custom metric 156 {           # field: metric156
+  type: number
+  sql: ${TABLE}.metric156 ;;
+}
+
+measure: Custom metric 157 {           # field: metric157
+  type: number
+  sql: ${TABLE}.metric157 ;;
+}
+
+measure: Custom metric 158 {           # field: metric158
+  type: number
+  sql: ${TABLE}.metric158 ;;
+}
+
+measure: Custom metric 159 {           # field: metric159
+  type: number
+  sql: ${TABLE}.metric159 ;;
+}
+
+measure: Custom metric 160 {           # field: metric160
+  type: number
+  sql: ${TABLE}.metric160 ;;
+}
+
+measure: Custom metric 161 {           # field: metric161
+  type: number
+  sql: ${TABLE}.metric161 ;;
+}
+
+measure: Custom metric 162 {           # field: metric162
+  type: number
+  sql: ${TABLE}.metric162 ;;
+}
+
+measure: Custom metric 163 {           # field: metric163
+  type: number
+  sql: ${TABLE}.metric163 ;;
+}
+
+measure: Custom metric 164 {           # field: metric164
+  type: number
+  sql: ${TABLE}.metric164 ;;
+}
+
+measure: Custom metric 165 {           # field: metric165
+  type: number
+  sql: ${TABLE}.metric165 ;;
+}
+
+measure: Custom metric 166 {           # field: metric166
+  type: number
+  sql: ${TABLE}.metric166 ;;
+}
+
+measure: Custom metric 167 {           # field: metric167
+  type: number
+  sql: ${TABLE}.metric167 ;;
+}
+
+measure: Custom metric 168 {           # field: metric168
+  type: number
+  sql: ${TABLE}.metric168 ;;
+}
+
+measure: Custom metric 169 {           # field: metric169
+  type: number
+  sql: ${TABLE}.metric169 ;;
+}
+
+measure: Custom metric 170 {           # field: metric170
+  type: number
+  sql: ${TABLE}.metric170 ;;
+}
+
+measure: Custom metric 171 {           # field: metric171
+  type: number
+  sql: ${TABLE}.metric171 ;;
+}
+
+measure: Custom metric 172 {           # field: metric172
+  type: number
+  sql: ${TABLE}.metric172 ;;
+}
+
+measure: Custom metric 173 {           # field: metric173
+  type: number
+  sql: ${TABLE}.metric173 ;;
+}
+
+measure: Custom metric 174 {           # field: metric174
+  type: number
+  sql: ${TABLE}.metric174 ;;
+}
+
+measure: Custom metric 175 {           # field: metric175
+  type: number
+  sql: ${TABLE}.metric175 ;;
+}
+
+measure: Custom metric 176 {           # field: metric176
+  type: number
+  sql: ${TABLE}.metric176 ;;
+}
+
+measure: Custom metric 177 {           # field: metric177
+  type: number
+  sql: ${TABLE}.metric177 ;;
+}
+
+measure: Custom metric 178 {           # field: metric178
+  type: number
+  sql: ${TABLE}.metric178 ;;
+}
+
+measure: Custom metric 179 {           # field: metric179
+  type: number
+  sql: ${TABLE}.metric179 ;;
+}
+
+measure: Custom metric 180 {           # field: metric180
+  type: number
+  sql: ${TABLE}.metric180 ;;
+}
+
+measure: Custom metric 181 {           # field: metric181
+  type: number
+  sql: ${TABLE}.metric181 ;;
+}
+
+measure: Custom metric 182 {           # field: metric182
+  type: number
+  sql: ${TABLE}.metric182 ;;
+}
+
+measure: Custom metric 183 {           # field: metric183
+  type: number
+  sql: ${TABLE}.metric183 ;;
+}
+
+measure: Custom metric 184 {           # field: metric184
+  type: number
+  sql: ${TABLE}.metric184 ;;
+}
+
+measure: Custom metric 185 {           # field: metric185
+  type: number
+  sql: ${TABLE}.metric185 ;;
+}
+
+measure: Custom metric 186 {           # field: metric186
+  type: number
+  sql: ${TABLE}.metric186 ;;
+}
+
+measure: Custom metric 187 {           # field: metric187
+  type: number
+  sql: ${TABLE}.metric187 ;;
+}
+
+measure: Custom metric 188 {           # field: metric188
+  type: number
+  sql: ${TABLE}.metric188 ;;
+}
+
+measure: Custom metric 189 {           # field: metric189
+  type: number
+  sql: ${TABLE}.metric189 ;;
+}
+
+measure: Custom metric 190 {           # field: metric190
+  type: number
+  sql: ${TABLE}.metric190 ;;
+}
+
+measure: Custom metric 191 {           # field: metric191
+  type: number
+  sql: ${TABLE}.metric191 ;;
+}
+
+measure: Custom metric 192 {           # field: metric192
+  type: number
+  sql: ${TABLE}.metric192 ;;
+}
+
+measure: Custom metric 193 {           # field: metric193
+  type: number
+  sql: ${TABLE}.metric193 ;;
+}
+
+measure: Custom metric 194 {           # field: metric194
+  type: number
+  sql: ${TABLE}.metric194 ;;
+}
+
+measure: Custom metric 195 {           # field: metric195
+  type: number
+  sql: ${TABLE}.metric195 ;;
+}
+
+measure: Custom metric 196 {           # field: metric196
+  type: number
+  sql: ${TABLE}.metric196 ;;
+}
+
+measure: Custom metric 197 {           # field: metric197
+  type: number
+  sql: ${TABLE}.metric197 ;;
+}
+
+measure: Custom metric 198 {           # field: metric198
+  type: number
+  sql: ${TABLE}.metric198 ;;
+}
+
+measure: Custom metric 199 {           # field: metric199
+  type: number
+  sql: ${TABLE}.metric199 ;;
+}
+
+measure: Custom metric 200 {           # field: metric200
+  type: number
+  sql: ${TABLE}.metric200 ;;
+}

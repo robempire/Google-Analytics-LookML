@@ -1,0 +1,3120 @@
+dimension: Year {           # field: Year
+  type: date_year
+  sql: ${TABLE}.Year ;;
+}
+
+dimension: Year & month {           # field: Yearmonth
+  type: string
+  sql: ${TABLE}.Yearmonth ;;
+}
+
+dimension: Year & quarter {           # field: Yearquarter
+  type: string
+  sql: ${TABLE}.Yearquarter ;;
+}
+
+dimension: Year & week (Sun-Sat) {           # field: Yearweek
+  type: string
+  sql: ${TABLE}.Yearweek ;;
+}
+
+dimension: Year & week (Mon-Sun) {           # field: YearweekISO
+  type: string
+  sql: ${TABLE}.YearweekISO ;;
+}
+
+dimension: Quarter {           # field: quarter
+  type: date_quarter
+  sql: ${TABLE}.quarter ;;
+}
+
+dimension: Month {           # field: Month
+  type: date_month
+  sql: ${TABLE}.Month ;;
+}
+
+dimension: Week (Sun-Sat) {           # field: week
+  type: date_week
+  sql: ${TABLE}.week ;;
+}
+
+dimension: Week (Mon-Sun) {           # field: weekISO
+  type: date_week
+  sql: ${TABLE}.weekISO ;;
+}
+
+dimension: Week (Mon-Sun, dates) {           # field: yearweekiso_daterange
+  type: date_week
+  sql: ${TABLE}.yearweekiso_daterange ;;
+}
+
+dimension: Day of month {           # field: day
+  type: date_day_of_month
+  sql: ${TABLE}.day ;;
+}
+
+dimension: Day of week {           # field: dayOfWeekWithName
+  type: date_day_of_week
+  sql: ${TABLE}.dayOfWeekWithName ;;
+}
+
+dimension: Date {           # field: Date
+  type: date
+  sql: ${TABLE}.Date ;;
+  convert_tz: no
+}
+
+dimension: Hour {           # field: Hour
+  type: date_hour
+  sql: ${TABLE}.Hour ;;
+}
+
+dimension: Minute {           # field: minute
+  type: date_minute
+  sql: ${TABLE}.minute ;;
+}
+
+dimension: Nth month {           # field: nthMonth
+  type: string
+  sql: ${TABLE}.nthMonth ;;
+}
+
+dimension: Nth week (Sun-Sat) {           # field: nthWeek
+  type: string
+  sql: ${TABLE}.nthWeek ;;
+}
+
+dimension: Nth day {           # field: nthDay
+  type: date_day_of_month
+  sql: ${TABLE}.nthDay ;;
+}
+
+dimension: Nth hour {           # field: nthHour
+  type: date_hour
+  sql: ${TABLE}.nthHour ;;
+}
+
+dimension: Nth minute {           # field: nthMinute
+  type: date_minute
+  sql: ${TABLE}.nthMinute ;;
+}
+
+dimension: Account ID {           # field: accountId
+  type: string
+  sql: ${TABLE}.accountId ;;
+}
+
+dimension: Account name {           # field: account
+  type: string
+  sql: ${TABLE}.account ;;
+}
+
+dimension: Web property ID {           # field: webPropertyId
+  type: string
+  sql: ${TABLE}.webPropertyId ;;
+}
+
+dimension: Web property name {           # field: webPropertyName
+  type: string
+  sql: ${TABLE}.webPropertyName ;;
+}
+
+dimension: View ID {           # field: profileID
+  type: string
+  sql: ${TABLE}.profileID ;;
+}
+
+dimension: View name {           # field: profile
+  type: string
+  sql: ${TABLE}.profile ;;
+}
+
+dimension: Segment {           # field: segment
+  type: string
+  sql: ${TABLE}.segment ;;
+}
+
+dimension: Segment ID {           # field: segmentID
+  type: string
+  sql: ${TABLE}.segmentID ;;
+}
+
+dimension: Source {           # field: Source
+  type: string
+  sql: ${TABLE}.Source ;;
+}
+
+dimension: Medium {           # field: medium
+  type: string
+  sql: ${TABLE}.medium ;;
+}
+
+dimension: Source / Medium {           # field: sourceMedium
+  type: string
+  sql: ${TABLE}.sourceMedium ;;
+}
+
+dimension: Channel group {           # field: channelGrouping
+  type: string
+  sql: ${TABLE}.channelGrouping ;;
+}
+
+dimension: Keyword {           # field: Keyword
+  type: string
+  sql: ${TABLE}.Keyword ;;
+}
+
+dimension: Campaign {           # field: Campaign
+  type: string
+  sql: ${TABLE}.Campaign ;;
+}
+
+dimension: Campaign code {           # field: campaignCode
+  type: string
+  sql: ${TABLE}.campaignCode ;;
+}
+
+dimension: Ad content (utm_content) {           # field: adContent
+  type: string
+  sql: ${TABLE}.adContent ;;
+}
+
+dimension: Referral path {           # field: ReferralPath
+  type: string
+  sql: ${TABLE}.ReferralPath ;;
+}
+
+dimension: Full referrer {           # field: fullReferrer
+  type: string
+  sql: ${TABLE}.fullReferrer ;;
+}
+
+dimension: Social network {           # field: socialNetwork
+  type: string
+  sql: ${TABLE}.socialNetwork ;;
+}
+
+dimension: Has social source referral {           # field: hasSocialSourceReferral
+  type: string
+  sql: ${TABLE}.hasSocialSourceReferral ;;
+}
+
+dimension: Source Property {           # field: sourcePropertyDisplayName
+  type: string
+  sql: ${TABLE}.sourcePropertyDisplayName ;;
+}
+
+dimension: Source Property ID {           # field: sourcePropertyTrackingId
+  type: string
+  sql: ${TABLE}.sourcePropertyTrackingId ;;
+}
+
+dimension: Continent {           # field: Continent
+  type: string
+  sql: ${TABLE}.Continent ;;
+}
+
+dimension: Sub continent {           # field: SubContinent
+  type: string
+  sql: ${TABLE}.SubContinent ;;
+}
+
+dimension: Country {           # field: Country
+  type: string
+  sql: ${TABLE}.Country ;;
+}
+
+dimension: Country ISO code {           # field: CountryIsoCode
+  type: string
+  sql: ${TABLE}.CountryIsoCode ;;
+}
+
+dimension: Region {           # field: Region
+  type: string
+  sql: ${TABLE}.Region ;;
+}
+
+dimension: Region ID {           # field: RegionId
+  type: string
+  sql: ${TABLE}.RegionId ;;
+}
+
+dimension: Region ISO code {           # field: RegionIsoCode
+  type: string
+  sql: ${TABLE}.RegionIsoCode ;;
+}
+
+dimension: City {           # field: City
+  type: string
+  sql: ${TABLE}.City ;;
+}
+
+dimension: City ID {           # field: CityId
+  type: string
+  sql: ${TABLE}.CityId ;;
+}
+
+dimension: Designated Market Area (DMA) {           # field: metro
+  type: string
+  sql: ${TABLE}.metro ;;
+}
+
+dimension: Language {           # field: Language
+  type: string
+  sql: ${TABLE}.Language ;;
+}
+
+dimension: Latitude {           # field: latitude
+  type: string
+  sql: ${TABLE}.latitude ;;
+}
+
+dimension: Longitude {           # field: longitude
+  type: string
+  sql: ${TABLE}.longitude ;;
+}
+
+dimension: User type {           # field: UserType
+  type: string
+  sql: ${TABLE}.UserType ;;
+}
+
+dimension: Days since last session {           # field: DaysSinceLastSession
+  type: string
+  sql: ${TABLE}.DaysSinceLastSession ;;
+}
+
+dimension: Session count {           # field: sessionCount
+  type: string
+  sql: ${TABLE}.sessionCount ;;
+}
+
+dimension: Page depth {           # field: PageDepth
+  type: string
+  sql: ${TABLE}.PageDepth ;;
+}
+
+dimension: Session length (seconds) {           # field: sessionDurationBucket
+  type: string
+  sql: ${TABLE}.sessionDurationBucket ;;
+}
+
+dimension: Client ID {           # field: clientID
+  type: string
+  sql: ${TABLE}.clientID ;;
+}
+
+dimension: Product Brand {           # field: productBrand
+  type: string
+  sql: ${TABLE}.productBrand ;;
+}
+
+dimension: Product Category Hierarchy {           # field: productCategoryHierarchy
+  type: string
+  sql: ${TABLE}.productCategoryHierarchy ;;
+}
+
+dimension: Product Category Level 1 {           # field: productCategoryLevel1
+  type: string
+  sql: ${TABLE}.productCategoryLevel1 ;;
+}
+
+dimension: Product Category Level 2 {           # field: productCategoryLevel2
+  type: string
+  sql: ${TABLE}.productCategoryLevel2 ;;
+}
+
+dimension: Product Category Level 3 {           # field: productCategoryLevel3
+  type: string
+  sql: ${TABLE}.productCategoryLevel3 ;;
+}
+
+dimension: Product Category Level 4 {           # field: productCategoryLevel4
+  type: string
+  sql: ${TABLE}.productCategoryLevel4 ;;
+}
+
+dimension: Product Category Level 5 {           # field: productCategoryLevel5
+  type: string
+  sql: ${TABLE}.productCategoryLevel5 ;;
+}
+
+dimension: Product category (old ecommerce tracking) {           # field: ProductCategory
+  type: string
+  sql: ${TABLE}.ProductCategory ;;
+}
+
+dimension: Product name {           # field: ProductName
+  type: string
+  sql: ${TABLE}.ProductName ;;
+}
+
+dimension: Product SKU {           # field: ProductSku
+  type: string
+  sql: ${TABLE}.ProductSku ;;
+}
+
+dimension: Product List Name {           # field: productListName
+  type: string
+  sql: ${TABLE}.productListName ;;
+}
+
+dimension: Product List Position {           # field: productListPosition
+  type: string
+  sql: ${TABLE}.productListPosition ;;
+}
+
+dimension: Product Variant {           # field: productVariant
+  type: string
+  sql: ${TABLE}.productVariant ;;
+}
+
+dimension: Internal Promotion Creative {           # field: internalPromotionCreative
+  type: string
+  sql: ${TABLE}.internalPromotionCreative ;;
+}
+
+dimension: Internal Promotion ID {           # field: internalPromotionId
+  type: string
+  sql: ${TABLE}.internalPromotionId ;;
+}
+
+dimension: Internal Promotion Name {           # field: internalPromotionName
+  type: string
+  sql: ${TABLE}.internalPromotionName ;;
+}
+
+dimension: Internal Promotion Position {           # field: internalPromotionPosition
+  type: string
+  sql: ${TABLE}.internalPromotionPosition ;;
+}
+
+dimension: Order Coupon Code {           # field: orderCouponCode
+  type: string
+  sql: ${TABLE}.orderCouponCode ;;
+}
+
+dimension: Product Coupon Code {           # field: productCouponCode
+  type: string
+  sql: ${TABLE}.productCouponCode ;;
+}
+
+dimension: Checkout Options {           # field: checkoutOptions
+  type: string
+  sql: ${TABLE}.checkoutOptions ;;
+}
+
+dimension: Shopping Stage {           # field: shoppingStage
+  type: string
+  sql: ${TABLE}.shoppingStage ;;
+}
+
+dimension: Days to transaction {           # field: DaysToTransaction
+  type: string
+  sql: ${TABLE}.DaysToTransaction ;;
+}
+
+dimension: Sessions to transaction {           # field: sessionsToTransaction
+  type: string
+  sql: ${TABLE}.sessionsToTransaction ;;
+}
+
+dimension: Transaction ID {           # field: TransactionID
+  type: string
+  sql: ${TABLE}.TransactionID ;;
+}
+
+dimension: Affiliation {           # field: Affiliation
+  type: string
+  sql: ${TABLE}.Affiliation ;;
+}
+
+dimension: Currency code {           # field: currencyCode
+  type: string
+  sql: ${TABLE}.currencyCode ;;
+}
+
+dimension: Page path {           # field: PagePath
+  type: string
+  sql: ${TABLE}.PagePath ;;
+}
+
+dimension: Page directory level 1 {           # field: pagePathLevel1
+  type: string
+  sql: ${TABLE}.pagePathLevel1 ;;
+}
+
+dimension: Page directory level 2 {           # field: pagePathLevel2
+  type: string
+  sql: ${TABLE}.pagePathLevel2 ;;
+}
+
+dimension: Page directory level 3 {           # field: pagePathLevel3
+  type: string
+  sql: ${TABLE}.pagePathLevel3 ;;
+}
+
+dimension: Page directory level 4 {           # field: pagePathLevel4
+  type: string
+  sql: ${TABLE}.pagePathLevel4 ;;
+}
+
+dimension: Page title {           # field: PageTitle
+  type: string
+  sql: ${TABLE}.PageTitle ;;
+}
+
+dimension: Landing page path {           # field: LandingPagePath
+  type: string
+  sql: ${TABLE}.LandingPagePath ;;
+}
+
+dimension: Second page path {           # field: SecondPagePath
+  type: string
+  sql: ${TABLE}.SecondPagePath ;;
+}
+
+dimension: Exit page path {           # field: ExitPagePath
+  type: string
+  sql: ${TABLE}.ExitPagePath ;;
+}
+
+dimension: Previous page path {           # field: PreviousPagePath
+  type: string
+  sql: ${TABLE}.PreviousPagePath ;;
+}
+
+dimension: Content group 1 {           # field: contentGroup1
+  type: string
+  sql: ${TABLE}.contentGroup1 ;;
+}
+
+dimension: Content group 2 {           # field: contentGroup2
+  type: string
+  sql: ${TABLE}.contentGroup2 ;;
+}
+
+dimension: Content group 3 {           # field: contentGroup3
+  type: string
+  sql: ${TABLE}.contentGroup3 ;;
+}
+
+dimension: Content group 4 {           # field: contentGroup4
+  type: string
+  sql: ${TABLE}.contentGroup4 ;;
+}
+
+dimension: Content group 5 {           # field: contentGroup5
+  type: string
+  sql: ${TABLE}.contentGroup5 ;;
+}
+
+dimension: Landing content group 1 {           # field: landingContentGroup1
+  type: string
+  sql: ${TABLE}.landingContentGroup1 ;;
+}
+
+dimension: Landing content group 2 {           # field: landingContentGroup2
+  type: string
+  sql: ${TABLE}.landingContentGroup2 ;;
+}
+
+dimension: Landing content group 3 {           # field: landingContentGroup3
+  type: string
+  sql: ${TABLE}.landingContentGroup3 ;;
+}
+
+dimension: Landing content group 4 {           # field: landingContentGroup4
+  type: string
+  sql: ${TABLE}.landingContentGroup4 ;;
+}
+
+dimension: Landing content group 5 {           # field: landingContentGroup5
+  type: string
+  sql: ${TABLE}.landingContentGroup5 ;;
+}
+
+dimension: Previous content group 1 {           # field: previousContentGroup1
+  type: string
+  sql: ${TABLE}.previousContentGroup1 ;;
+}
+
+dimension: Previous content group 2 {           # field: previousContentGroup2
+  type: string
+  sql: ${TABLE}.previousContentGroup2 ;;
+}
+
+dimension: Previous content group 3 {           # field: previousContentGroup3
+  type: string
+  sql: ${TABLE}.previousContentGroup3 ;;
+}
+
+dimension: Previous content group 4 {           # field: previousContentGroup4
+  type: string
+  sql: ${TABLE}.previousContentGroup4 ;;
+}
+
+dimension: Previous content group 5 {           # field: previousContentGroup5
+  type: string
+  sql: ${TABLE}.previousContentGroup5 ;;
+}
+
+dimension: Next content group 1 {           # field: nextContentGroup1
+  type: string
+  sql: ${TABLE}.nextContentGroup1 ;;
+}
+
+dimension: Next content group 2 {           # field: nextContentGroup2
+  type: string
+  sql: ${TABLE}.nextContentGroup2 ;;
+}
+
+dimension: Next content group 3 {           # field: nextContentGroup3
+  type: string
+  sql: ${TABLE}.nextContentGroup3 ;;
+}
+
+dimension: Next content group 4 {           # field: nextContentGroup4
+  type: string
+  sql: ${TABLE}.nextContentGroup4 ;;
+}
+
+dimension: Next content group 5 {           # field: nextContentGroup5
+  type: string
+  sql: ${TABLE}.nextContentGroup5 ;;
+}
+
+dimension: Customer ID {           # field: adwordsCustomerId
+  type: string
+  sql: ${TABLE}.adwordsCustomerId ;;
+}
+
+dimension: Campaign ID {           # field: adwordsCampaignId
+  type: string
+  sql: ${TABLE}.adwordsCampaignId ;;
+}
+
+dimension: Ad group ID {           # field: adwordsAdGroupId
+  type: string
+  sql: ${TABLE}.adwordsAdGroupId ;;
+}
+
+dimension: Creative ID {           # field: adwordsCreativeId
+  type: string
+  sql: ${TABLE}.adwordsCreativeId ;;
+}
+
+dimension: Criteria ID {           # field: adwordsCriteriaId
+  type: string
+  sql: ${TABLE}.adwordsCriteriaId ;;
+}
+
+dimension: Ad group {           # field: adGroup
+  type: string
+  sql: ${TABLE}.adGroup ;;
+}
+
+dimension: Ad slot {           # field: adSlot
+  type: string
+  sql: ${TABLE}.adSlot ;;
+}
+
+dimension: Ad slot position {           # field: adSlotPosition
+  type: string
+  sql: ${TABLE}.adSlotPosition ;;
+}
+
+dimension: Ad distribution network {           # field: adDistributionNetwork
+  type: string
+  sql: ${TABLE}.adDistributionNetwork ;;
+}
+
+dimension: Ad match type {           # field: adMatchType
+  type: string
+  sql: ${TABLE}.adMatchType ;;
+}
+
+dimension: Keyword match type {           # field: adKeywordMatchType
+  type: string
+  sql: ${TABLE}.adKeywordMatchType ;;
+}
+
+dimension: Ad matched query {           # field: adMatchedQuery
+  type: string
+  sql: ${TABLE}.adMatchedQuery ;;
+}
+
+dimension: Ad placement domain {           # field: adPlacementDomain
+  type: string
+  sql: ${TABLE}.adPlacementDomain ;;
+}
+
+dimension: Ad placement URL {           # field: adPlacementUrl
+  type: string
+  sql: ${TABLE}.adPlacementUrl ;;
+}
+
+dimension: Ad format {           # field: adFormat
+  type: string
+  sql: ${TABLE}.adFormat ;;
+}
+
+dimension: Ad targeting type {           # field: adTargetingType
+  type: string
+  sql: ${TABLE}.adTargetingType ;;
+}
+
+dimension: Ad targeting option {           # field: adTargetingOption
+  type: string
+  sql: ${TABLE}.adTargetingOption ;;
+}
+
+dimension: Ad display URL {           # field: adDisplayUrl
+  type: string
+  sql: ${TABLE}.adDisplayUrl ;;
+}
+
+dimension: Ad destination URL {           # field: adDestinationUrl
+  type: string
+  sql: ${TABLE}.adDestinationUrl ;;
+}
+
+dimension: Is TrueView video ad {           # field: isTrueViewVideoAd
+  type: string
+  sql: ${TABLE}.isTrueViewVideoAd ;;
+}
+
+dimension: Ad query word count {           # field: adQueryWordCount
+  type: string
+  sql: ${TABLE}.adQueryWordCount ;;
+}
+
+dimension: Browser version {           # field: BrowserVersion
+  type: string
+  sql: ${TABLE}.BrowserVersion ;;
+}
+
+dimension: Browser size {           # field: BrowserSize
+  type: string
+  sql: ${TABLE}.BrowserSize ;;
+}
+
+dimension: Operating system {           # field: OperatingSystem
+  type: string
+  sql: ${TABLE}.OperatingSystem ;;
+}
+
+dimension: Operating system version {           # field: OperatingSystemVersion
+  type: string
+  sql: ${TABLE}.OperatingSystemVersion ;;
+}
+
+dimension: Screen colors {           # field: ScreenColors
+  type: string
+  sql: ${TABLE}.ScreenColors ;;
+}
+
+dimension: Screen resolution {           # field: ScreenResolution
+  type: string
+  sql: ${TABLE}.ScreenResolution ;;
+}
+
+dimension: Java enabled {           # field: JavaEnabled
+  type: string
+  sql: ${TABLE}.JavaEnabled ;;
+}
+
+dimension: Flash version {           # field: FlashVersion
+  type: string
+  sql: ${TABLE}.FlashVersion ;;
+}
+
+dimension: Hostname {           # field: Hostname
+  type: string
+  sql: ${TABLE}.Hostname ;;
+}
+
+dimension: Network domain {           # field: NetworkDomain
+  type: string
+  sql: ${TABLE}.NetworkDomain ;;
+}
+
+dimension: Network location {           # field: NetworkLocation
+  type: string
+  sql: ${TABLE}.NetworkLocation ;;
+}
+
+dimension: Data source {           # field: ga_data_source
+  type: string
+  sql: ${TABLE}.ga_data_source ;;
+}
+
+dimension: Device category {           # field: deviceCategory
+  type: string
+  sql: ${TABLE}.deviceCategory ;;
+}
+
+dimension: Mobile device brand {           # field: mobileDeviceBranding
+  type: string
+  sql: ${TABLE}.mobileDeviceBranding ;;
+}
+
+dimension: Mobile device model {           # field: mobileDeviceModel
+  type: string
+  sql: ${TABLE}.mobileDeviceModel ;;
+}
+
+dimension: Mobile device model (improved) {           # field: mobileDeviceModel_improved
+  type: string
+  sql: ${TABLE}.mobileDeviceModel_improved ;;
+}
+
+dimension: Mobile device full name {           # field: mobileDeviceInfo
+  type: string
+  sql: ${TABLE}.mobileDeviceInfo ;;
+}
+
+dimension: Mobile device full name (improved) {           # field: mobileDeviceInfo_improved
+  type: string
+  sql: ${TABLE}.mobileDeviceInfo_improved ;;
+}
+
+dimension: Mobile device marketing name {           # field: mobileDeviceMarketingName
+  type: string
+  sql: ${TABLE}.mobileDeviceMarketingName ;;
+}
+
+dimension: Mobile device input mode {           # field: mobileInputSelector
+  type: string
+  sql: ${TABLE}.mobileInputSelector ;;
+}
+
+dimension: Event category {           # field: EventCategory
+  type: string
+  sql: ${TABLE}.EventCategory ;;
+}
+
+dimension: Event label {           # field: EventLabel
+  type: string
+  sql: ${TABLE}.EventLabel ;;
+}
+
+dimension: Event action {           # field: EventAction
+  type: string
+  sql: ${TABLE}.EventAction ;;
+}
+
+dimension: Transaction ID {           # field: mcf:transactionId
+  type: string
+  sql: ${TABLE}.mcf:transactionId ;;
+}
+
+dimension: MCF channel group {           # field: mcf:basicChannelGrouping
+  type: string
+  sql: ${TABLE}.mcf:basicChannelGrouping ;;
+}
+
+dimension: MCF channel group path {           # field: mcf:basicChannelGroupingPath
+  type: string
+  sql: ${TABLE}.mcf:basicChannelGroupingPath ;;
+}
+
+dimension: 1st interaction channel {           # field: mcf:interaction1
+  type: string
+  sql: ${TABLE}.mcf:interaction1 ;;
+}
+
+dimension: 2nd interaction channel {           # field: mcf:interaction2
+  type: string
+  sql: ${TABLE}.mcf:interaction2 ;;
+}
+
+dimension: 3rd interaction channel {           # field: mcf:interaction3
+  type: string
+  sql: ${TABLE}.mcf:interaction3 ;;
+}
+
+dimension: 4th interaction channel {           # field: mcf:interaction4
+  type: string
+  sql: ${TABLE}.mcf:interaction4 ;;
+}
+
+dimension: Source path {           # field: mcf:sourcePath
+  type: string
+  sql: ${TABLE}.mcf:sourcePath ;;
+}
+
+dimension: Medium path {           # field: mcf:mediumPath
+  type: string
+  sql: ${TABLE}.mcf:mediumPath ;;
+}
+
+dimension: Source/medium path {           # field: mcf:sourceMediumPath
+  type: string
+  sql: ${TABLE}.mcf:sourceMediumPath ;;
+}
+
+dimension: Campaign path {           # field: mcf:campaignPath
+  type: string
+  sql: ${TABLE}.mcf:campaignPath ;;
+}
+
+dimension: 1st interaction campaign {           # field: mcf:campaign1
+  type: string
+  sql: ${TABLE}.mcf:campaign1 ;;
+}
+
+dimension: 2nd interaction campaign {           # field: mcf:campaign2
+  type: string
+  sql: ${TABLE}.mcf:campaign2 ;;
+}
+
+dimension: 3rd interaction campaign {           # field: mcf:campaign3
+  type: string
+  sql: ${TABLE}.mcf:campaign3 ;;
+}
+
+dimension: 4th interaction campaign {           # field: mcf:campaign4
+  type: string
+  sql: ${TABLE}.mcf:campaign4 ;;
+}
+
+dimension: 5th interaction campaign {           # field: mcf:campaign5
+  type: string
+  sql: ${TABLE}.mcf:campaign5 ;;
+}
+
+dimension: Keyword path {           # field: mcf:keywordPath
+  type: string
+  sql: ${TABLE}.mcf:keywordPath ;;
+}
+
+dimension: Google Ads ad content path {           # field: mcf:adwordsAdContentPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsAdContentPath ;;
+}
+
+dimension: Google Ads ad group ID path {           # field: mcf:adwordsAdGroupIDPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsAdGroupIDPath ;;
+}
+
+dimension: Google Ads ad group path {           # field: mcf:adwordsAdGroupPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsAdGroupPath ;;
+}
+
+dimension: Google Ads campaign ID path {           # field: mcf:adwordsCampaignIDPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsCampaignIDPath ;;
+}
+
+dimension: Google Ads campaign path {           # field: mcf:adwordsCampaignPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsCampaignPath ;;
+}
+
+dimension: Google Ads creative ID path {           # field: mcf:adwordsCreativeIDPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsCreativeIDPath ;;
+}
+
+dimension: Google Ads criteria ID path {           # field: mcf:adwordsCriteriaIDPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsCriteriaIDPath ;;
+}
+
+dimension: Google Ads destination URL path {           # field: mcf:adwordsDestinationUrlPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsDestinationUrlPath ;;
+}
+
+dimension: Google Ads display URL path {           # field: mcf:adwordsDisplayUrlPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsDisplayUrlPath ;;
+}
+
+dimension: Google Ads keyword path {           # field: mcf:adwordsKeywordPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsKeywordPath ;;
+}
+
+dimension: Google Ads matched search query path {           # field: mcf:adwordsMatchedSearchQueryPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsMatchedSearchQueryPath ;;
+}
+
+dimension: Google Ads placement domain path {           # field: mcf:adwordsPlacementDomainPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsPlacementDomainPath ;;
+}
+
+dimension: Google Ads placement URL path {           # field: mcf:adwordsPlacementUrlPath
+  type: string
+  sql: ${TABLE}.mcf:adwordsPlacementUrlPath ;;
+}
+
+dimension: Conversion type {           # field: mcf:conversionType
+  type: string
+  sql: ${TABLE}.mcf:conversionType ;;
+}
+
+dimension: Conversion goal number {           # field: mcf:conversionGoalNumber
+  type: string
+  sql: ${TABLE}.mcf:conversionGoalNumber ;;
+}
+
+dimension: Conversion path length (# of interactions) {           # field: mcf:pathLengthInInteractionsHistogram
+  type: string
+  sql: ${TABLE}.mcf:pathLengthInInteractionsHistogram ;;
+}
+
+dimension: Conversion time lag (days) {           # field: mcf:timeLagInDaysHistogram
+  type: string
+  sql: ${TABLE}.mcf:timeLagInDaysHistogram ;;
+}
+
+dimension: Search keyword {           # field: SearchKeyword
+  type: string
+  sql: ${TABLE}.SearchKeyword ;;
+}
+
+dimension: Search category {           # field: SearchCategory
+  type: string
+  sql: ${TABLE}.SearchCategory ;;
+}
+
+dimension: Search used {           # field: SearchUsed
+  type: string
+  sql: ${TABLE}.SearchUsed ;;
+}
+
+dimension: Search start page {           # field: SearchStartPage
+  type: string
+  sql: ${TABLE}.SearchStartPage ;;
+}
+
+dimension: Search destination page {           # field: SearchDestinationPage
+  type: string
+  sql: ${TABLE}.SearchDestinationPage ;;
+}
+
+dimension: Search keyword refinement {           # field: SearchKeywordRefinement
+  type: string
+  sql: ${TABLE}.SearchKeywordRefinement ;;
+}
+
+dimension: Social engagement type {           # field: socialEngagementType
+  type: string
+  sql: ${TABLE}.socialEngagementType ;;
+}
+
+dimension: Social action type {           # field: socialInteractionNetworkAction
+  type: string
+  sql: ${TABLE}.socialInteractionNetworkAction ;;
+}
+
+dimension: Social action network {           # field: socialInteractionNetwork
+  type: string
+  sql: ${TABLE}.socialInteractionNetwork ;;
+}
+
+dimension: Social action target URL {           # field: socialInteractionTarget
+  type: string
+  sql: ${TABLE}.socialInteractionTarget ;;
+}
+
+dimension: Offsite social action shared URL {           # field: socialActivityContentUrl
+  type: string
+  sql: ${TABLE}.socialActivityContentUrl ;;
+}
+
+dimension: Gender {           # field: userGender
+  type: string
+  sql: ${TABLE}.userGender ;;
+}
+
+dimension: Affinity category {           # field: interestAffinityCategory
+  type: string
+  sql: ${TABLE}.interestAffinityCategory ;;
+}
+
+dimension: In-market category {           # field: interestInMarketCategory
+  type: string
+  sql: ${TABLE}.interestInMarketCategory ;;
+}
+
+dimension: Other category {           # field: interestOtherCategory
+  type: string
+  sql: ${TABLE}.interestOtherCategory ;;
+}
+
+dimension: App ID {           # field: appId
+  type: string
+  sql: ${TABLE}.appId ;;
+}
+
+dimension: App name {           # field: appName
+  type: string
+  sql: ${TABLE}.appName ;;
+}
+
+dimension: App version {           # field: appVersion
+  type: string
+  sql: ${TABLE}.appVersion ;;
+}
+
+dimension: App installer ID {           # field: appInstallerId
+  type: string
+  sql: ${TABLE}.appInstallerId ;;
+}
+
+dimension: Screen name {           # field: screenName
+  type: string
+  sql: ${TABLE}.screenName ;;
+}
+
+dimension: Landing screen name {           # field: landingScreenName
+  type: string
+  sql: ${TABLE}.landingScreenName ;;
+}
+
+dimension: Exit screen name {           # field: exitScreenName
+  type: string
+  sql: ${TABLE}.exitScreenName ;;
+}
+
+dimension: Screen depth {           # field: screenDepth
+  type: string
+  sql: ${TABLE}.screenDepth ;;
+}
+
+dimension: Exception Description {           # field: exceptionDescription
+  type: string
+  sql: ${TABLE}.exceptionDescription ;;
+}
+
+dimension: Experiment ID {           # field: experimentID
+  type: string
+  sql: ${TABLE}.experimentID ;;
+}
+
+dimension: Experiment variant {           # field: experimentVariant
+  type: string
+  sql: ${TABLE}.experimentVariant ;;
+}
+
+dimension: Goal completion page {           # field: goalCompletionLocation
+  type: string
+  sql: ${TABLE}.goalCompletionLocation ;;
+}
+
+dimension: Goal previous step 1 {           # field: goalPreviousStep1
+  type: string
+  sql: ${TABLE}.goalPreviousStep1 ;;
+}
+
+dimension: Goal previous step 2 {           # field: goalPreviousStep2
+  type: string
+  sql: ${TABLE}.goalPreviousStep2 ;;
+}
+
+dimension: Goal previous step 3 {           # field: goalPreviousStep3
+  type: string
+  sql: ${TABLE}.goalPreviousStep3 ;;
+}
+
+dimension: Timing category {           # field: userTimingCategory
+  type: string
+  sql: ${TABLE}.userTimingCategory ;;
+}
+
+dimension: Timing label {           # field: userTimingLabel
+  type: string
+  sql: ${TABLE}.userTimingLabel ;;
+}
+
+dimension: Timing variable {           # field: userTimingVariable
+  type: string
+  sql: ${TABLE}.userTimingVariable ;;
+}
+
+dimension: UserDefinedValue {           # field: UserDefinedValue
+  type: string
+  sql: ${TABLE}.UserDefinedValue ;;
+}
+
+dimension: CustomVarName1 {           # field: CustomVarName1
+  type: string
+  sql: ${TABLE}.CustomVarName1 ;;
+}
+
+dimension: CustomVarName2 {           # field: CustomVarName2
+  type: string
+  sql: ${TABLE}.CustomVarName2 ;;
+}
+
+dimension: CustomVarName3 {           # field: CustomVarName3
+  type: string
+  sql: ${TABLE}.CustomVarName3 ;;
+}
+
+dimension: CustomVarName4 {           # field: CustomVarName4
+  type: string
+  sql: ${TABLE}.CustomVarName4 ;;
+}
+
+dimension: CustomVarName5 {           # field: CustomVarName5
+  type: string
+  sql: ${TABLE}.CustomVarName5 ;;
+}
+
+dimension: CustomVarName6 {           # field: CustomVarName6
+  type: string
+  sql: ${TABLE}.CustomVarName6 ;;
+}
+
+dimension: CustomVarName7 {           # field: CustomVarName7
+  type: string
+  sql: ${TABLE}.CustomVarName7 ;;
+}
+
+dimension: CustomVarName8 {           # field: CustomVarName8
+  type: string
+  sql: ${TABLE}.CustomVarName8 ;;
+}
+
+dimension: CustomVarName9 {           # field: CustomVarName9
+  type: string
+  sql: ${TABLE}.CustomVarName9 ;;
+}
+
+dimension: CustomVarName10 {           # field: CustomVarName10
+  type: string
+  sql: ${TABLE}.CustomVarName10 ;;
+}
+
+dimension: CustomVarName11 {           # field: CustomVarName11
+  type: string
+  sql: ${TABLE}.CustomVarName11 ;;
+}
+
+dimension: CustomVarName12 {           # field: CustomVarName12
+  type: string
+  sql: ${TABLE}.CustomVarName12 ;;
+}
+
+dimension: CustomVarName13 {           # field: CustomVarName13
+  type: string
+  sql: ${TABLE}.CustomVarName13 ;;
+}
+
+dimension: CustomVarName14 {           # field: CustomVarName14
+  type: string
+  sql: ${TABLE}.CustomVarName14 ;;
+}
+
+dimension: CustomVarName15 {           # field: CustomVarName15
+  type: string
+  sql: ${TABLE}.CustomVarName15 ;;
+}
+
+dimension: CustomVarName16 {           # field: CustomVarName16
+  type: string
+  sql: ${TABLE}.CustomVarName16 ;;
+}
+
+dimension: CustomVarName17 {           # field: CustomVarName17
+  type: string
+  sql: ${TABLE}.CustomVarName17 ;;
+}
+
+dimension: CustomVarName18 {           # field: CustomVarName18
+  type: string
+  sql: ${TABLE}.CustomVarName18 ;;
+}
+
+dimension: CustomVarName19 {           # field: CustomVarName19
+  type: string
+  sql: ${TABLE}.CustomVarName19 ;;
+}
+
+dimension: CustomVarName20 {           # field: CustomVarName20
+  type: string
+  sql: ${TABLE}.CustomVarName20 ;;
+}
+
+dimension: CustomVarName21 {           # field: CustomVarName21
+  type: string
+  sql: ${TABLE}.CustomVarName21 ;;
+}
+
+dimension: CustomVarName22 {           # field: CustomVarName22
+  type: string
+  sql: ${TABLE}.CustomVarName22 ;;
+}
+
+dimension: CustomVarName23 {           # field: CustomVarName23
+  type: string
+  sql: ${TABLE}.CustomVarName23 ;;
+}
+
+dimension: CustomVarName24 {           # field: CustomVarName24
+  type: string
+  sql: ${TABLE}.CustomVarName24 ;;
+}
+
+dimension: CustomVarName25 {           # field: CustomVarName25
+  type: string
+  sql: ${TABLE}.CustomVarName25 ;;
+}
+
+dimension: CustomVarName26 {           # field: CustomVarName26
+  type: string
+  sql: ${TABLE}.CustomVarName26 ;;
+}
+
+dimension: CustomVarName27 {           # field: CustomVarName27
+  type: string
+  sql: ${TABLE}.CustomVarName27 ;;
+}
+
+dimension: CustomVarName28 {           # field: CustomVarName28
+  type: string
+  sql: ${TABLE}.CustomVarName28 ;;
+}
+
+dimension: CustomVarName29 {           # field: CustomVarName29
+  type: string
+  sql: ${TABLE}.CustomVarName29 ;;
+}
+
+dimension: CustomVarName30 {           # field: CustomVarName30
+  type: string
+  sql: ${TABLE}.CustomVarName30 ;;
+}
+
+dimension: CustomVarName31 {           # field: CustomVarName31
+  type: string
+  sql: ${TABLE}.CustomVarName31 ;;
+}
+
+dimension: CustomVarName32 {           # field: CustomVarName32
+  type: string
+  sql: ${TABLE}.CustomVarName32 ;;
+}
+
+dimension: CustomVarName33 {           # field: CustomVarName33
+  type: string
+  sql: ${TABLE}.CustomVarName33 ;;
+}
+
+dimension: CustomVarName34 {           # field: CustomVarName34
+  type: string
+  sql: ${TABLE}.CustomVarName34 ;;
+}
+
+dimension: CustomVarName35 {           # field: CustomVarName35
+  type: string
+  sql: ${TABLE}.CustomVarName35 ;;
+}
+
+dimension: CustomVarName36 {           # field: CustomVarName36
+  type: string
+  sql: ${TABLE}.CustomVarName36 ;;
+}
+
+dimension: CustomVarName37 {           # field: CustomVarName37
+  type: string
+  sql: ${TABLE}.CustomVarName37 ;;
+}
+
+dimension: CustomVarName38 {           # field: CustomVarName38
+  type: string
+  sql: ${TABLE}.CustomVarName38 ;;
+}
+
+dimension: CustomVarName39 {           # field: CustomVarName39
+  type: string
+  sql: ${TABLE}.CustomVarName39 ;;
+}
+
+dimension: CustomVarName40 {           # field: CustomVarName40
+  type: string
+  sql: ${TABLE}.CustomVarName40 ;;
+}
+
+dimension: CustomVarName41 {           # field: CustomVarName41
+  type: string
+  sql: ${TABLE}.CustomVarName41 ;;
+}
+
+dimension: CustomVarName42 {           # field: CustomVarName42
+  type: string
+  sql: ${TABLE}.CustomVarName42 ;;
+}
+
+dimension: CustomVarName43 {           # field: CustomVarName43
+  type: string
+  sql: ${TABLE}.CustomVarName43 ;;
+}
+
+dimension: CustomVarName44 {           # field: CustomVarName44
+  type: string
+  sql: ${TABLE}.CustomVarName44 ;;
+}
+
+dimension: CustomVarName45 {           # field: CustomVarName45
+  type: string
+  sql: ${TABLE}.CustomVarName45 ;;
+}
+
+dimension: CustomVarName46 {           # field: CustomVarName46
+  type: string
+  sql: ${TABLE}.CustomVarName46 ;;
+}
+
+dimension: CustomVarName47 {           # field: CustomVarName47
+  type: string
+  sql: ${TABLE}.CustomVarName47 ;;
+}
+
+dimension: CustomVarName48 {           # field: CustomVarName48
+  type: string
+  sql: ${TABLE}.CustomVarName48 ;;
+}
+
+dimension: CustomVarName49 {           # field: CustomVarName49
+  type: string
+  sql: ${TABLE}.CustomVarName49 ;;
+}
+
+dimension: CustomVarName50 {           # field: CustomVarName50
+  type: string
+  sql: ${TABLE}.CustomVarName50 ;;
+}
+
+dimension: CustomVarValue1 {           # field: CustomVarValue1
+  type: string
+  sql: ${TABLE}.CustomVarValue1 ;;
+}
+
+dimension: CustomVarValue2 {           # field: CustomVarValue2
+  type: string
+  sql: ${TABLE}.CustomVarValue2 ;;
+}
+
+dimension: CustomVarValue3 {           # field: CustomVarValue3
+  type: string
+  sql: ${TABLE}.CustomVarValue3 ;;
+}
+
+dimension: CustomVarValue4 {           # field: CustomVarValue4
+  type: string
+  sql: ${TABLE}.CustomVarValue4 ;;
+}
+
+dimension: CustomVarValue5 {           # field: CustomVarValue5
+  type: string
+  sql: ${TABLE}.CustomVarValue5 ;;
+}
+
+dimension: CustomVarValue6 {           # field: CustomVarValue6
+  type: string
+  sql: ${TABLE}.CustomVarValue6 ;;
+}
+
+dimension: CustomVarValue7 {           # field: CustomVarValue7
+  type: string
+  sql: ${TABLE}.CustomVarValue7 ;;
+}
+
+dimension: CustomVarValue8 {           # field: CustomVarValue8
+  type: string
+  sql: ${TABLE}.CustomVarValue8 ;;
+}
+
+dimension: CustomVarValue9 {           # field: CustomVarValue9
+  type: string
+  sql: ${TABLE}.CustomVarValue9 ;;
+}
+
+dimension: CustomVarValue10 {           # field: CustomVarValue10
+  type: string
+  sql: ${TABLE}.CustomVarValue10 ;;
+}
+
+dimension: CustomVarValue11 {           # field: CustomVarValue11
+  type: string
+  sql: ${TABLE}.CustomVarValue11 ;;
+}
+
+dimension: CustomVarValue12 {           # field: CustomVarValue12
+  type: string
+  sql: ${TABLE}.CustomVarValue12 ;;
+}
+
+dimension: CustomVarValue13 {           # field: CustomVarValue13
+  type: string
+  sql: ${TABLE}.CustomVarValue13 ;;
+}
+
+dimension: CustomVarValue14 {           # field: CustomVarValue14
+  type: string
+  sql: ${TABLE}.CustomVarValue14 ;;
+}
+
+dimension: CustomVarValue15 {           # field: CustomVarValue15
+  type: string
+  sql: ${TABLE}.CustomVarValue15 ;;
+}
+
+dimension: CustomVarValue16 {           # field: CustomVarValue16
+  type: string
+  sql: ${TABLE}.CustomVarValue16 ;;
+}
+
+dimension: CustomVarValue17 {           # field: CustomVarValue17
+  type: string
+  sql: ${TABLE}.CustomVarValue17 ;;
+}
+
+dimension: CustomVarValue18 {           # field: CustomVarValue18
+  type: string
+  sql: ${TABLE}.CustomVarValue18 ;;
+}
+
+dimension: CustomVarValue19 {           # field: CustomVarValue19
+  type: string
+  sql: ${TABLE}.CustomVarValue19 ;;
+}
+
+dimension: CustomVarValue20 {           # field: CustomVarValue20
+  type: string
+  sql: ${TABLE}.CustomVarValue20 ;;
+}
+
+dimension: CustomVarValue21 {           # field: CustomVarValue21
+  type: string
+  sql: ${TABLE}.CustomVarValue21 ;;
+}
+
+dimension: CustomVarValue22 {           # field: CustomVarValue22
+  type: string
+  sql: ${TABLE}.CustomVarValue22 ;;
+}
+
+dimension: CustomVarValue23 {           # field: CustomVarValue23
+  type: string
+  sql: ${TABLE}.CustomVarValue23 ;;
+}
+
+dimension: CustomVarValue24 {           # field: CustomVarValue24
+  type: string
+  sql: ${TABLE}.CustomVarValue24 ;;
+}
+
+dimension: CustomVarValue25 {           # field: CustomVarValue25
+  type: string
+  sql: ${TABLE}.CustomVarValue25 ;;
+}
+
+dimension: CustomVarValue26 {           # field: CustomVarValue26
+  type: string
+  sql: ${TABLE}.CustomVarValue26 ;;
+}
+
+dimension: CustomVarValue27 {           # field: CustomVarValue27
+  type: string
+  sql: ${TABLE}.CustomVarValue27 ;;
+}
+
+dimension: CustomVarValue28 {           # field: CustomVarValue28
+  type: string
+  sql: ${TABLE}.CustomVarValue28 ;;
+}
+
+dimension: CustomVarValue29 {           # field: CustomVarValue29
+  type: string
+  sql: ${TABLE}.CustomVarValue29 ;;
+}
+
+dimension: CustomVarValue30 {           # field: CustomVarValue30
+  type: string
+  sql: ${TABLE}.CustomVarValue30 ;;
+}
+
+dimension: CustomVarValue31 {           # field: CustomVarValue31
+  type: string
+  sql: ${TABLE}.CustomVarValue31 ;;
+}
+
+dimension: CustomVarValue32 {           # field: CustomVarValue32
+  type: string
+  sql: ${TABLE}.CustomVarValue32 ;;
+}
+
+dimension: CustomVarValue33 {           # field: CustomVarValue33
+  type: string
+  sql: ${TABLE}.CustomVarValue33 ;;
+}
+
+dimension: CustomVarValue34 {           # field: CustomVarValue34
+  type: string
+  sql: ${TABLE}.CustomVarValue34 ;;
+}
+
+dimension: CustomVarValue35 {           # field: CustomVarValue35
+  type: string
+  sql: ${TABLE}.CustomVarValue35 ;;
+}
+
+dimension: CustomVarValue36 {           # field: CustomVarValue36
+  type: string
+  sql: ${TABLE}.CustomVarValue36 ;;
+}
+
+dimension: CustomVarValue37 {           # field: CustomVarValue37
+  type: string
+  sql: ${TABLE}.CustomVarValue37 ;;
+}
+
+dimension: CustomVarValue38 {           # field: CustomVarValue38
+  type: string
+  sql: ${TABLE}.CustomVarValue38 ;;
+}
+
+dimension: CustomVarValue39 {           # field: CustomVarValue39
+  type: string
+  sql: ${TABLE}.CustomVarValue39 ;;
+}
+
+dimension: CustomVarValue40 {           # field: CustomVarValue40
+  type: string
+  sql: ${TABLE}.CustomVarValue40 ;;
+}
+
+dimension: CustomVarValue41 {           # field: CustomVarValue41
+  type: string
+  sql: ${TABLE}.CustomVarValue41 ;;
+}
+
+dimension: CustomVarValue42 {           # field: CustomVarValue42
+  type: string
+  sql: ${TABLE}.CustomVarValue42 ;;
+}
+
+dimension: CustomVarValue43 {           # field: CustomVarValue43
+  type: string
+  sql: ${TABLE}.CustomVarValue43 ;;
+}
+
+dimension: CustomVarValue44 {           # field: CustomVarValue44
+  type: string
+  sql: ${TABLE}.CustomVarValue44 ;;
+}
+
+dimension: CustomVarValue45 {           # field: CustomVarValue45
+  type: string
+  sql: ${TABLE}.CustomVarValue45 ;;
+}
+
+dimension: CustomVarValue46 {           # field: CustomVarValue46
+  type: string
+  sql: ${TABLE}.CustomVarValue46 ;;
+}
+
+dimension: CustomVarValue47 {           # field: CustomVarValue47
+  type: string
+  sql: ${TABLE}.CustomVarValue47 ;;
+}
+
+dimension: CustomVarValue48 {           # field: CustomVarValue48
+  type: string
+  sql: ${TABLE}.CustomVarValue48 ;;
+}
+
+dimension: CustomVarValue49 {           # field: CustomVarValue49
+  type: string
+  sql: ${TABLE}.CustomVarValue49 ;;
+}
+
+dimension: CustomVarValue50 {           # field: CustomVarValue50
+  type: string
+  sql: ${TABLE}.CustomVarValue50 ;;
+}
+
+dimension: Custom dimension 1 {           # field: dimension1
+  type: string
+  sql: ${TABLE}.dimension1 ;;
+}
+
+dimension: Custom dimension 2 {           # field: dimension2
+  type: string
+  sql: ${TABLE}.dimension2 ;;
+}
+
+dimension: Custom dimension 3 {           # field: dimension3
+  type: string
+  sql: ${TABLE}.dimension3 ;;
+}
+
+dimension: Custom dimension 4 {           # field: dimension4
+  type: string
+  sql: ${TABLE}.dimension4 ;;
+}
+
+dimension: Custom dimension 5 {           # field: dimension5
+  type: string
+  sql: ${TABLE}.dimension5 ;;
+}
+
+dimension: Custom dimension 6 {           # field: dimension6
+  type: string
+  sql: ${TABLE}.dimension6 ;;
+}
+
+dimension: Custom dimension 7 {           # field: dimension7
+  type: string
+  sql: ${TABLE}.dimension7 ;;
+}
+
+dimension: Custom dimension 8 {           # field: dimension8
+  type: string
+  sql: ${TABLE}.dimension8 ;;
+}
+
+dimension: Custom dimension 9 {           # field: dimension9
+  type: string
+  sql: ${TABLE}.dimension9 ;;
+}
+
+dimension: Custom dimension 10 {           # field: dimension10
+  type: string
+  sql: ${TABLE}.dimension10 ;;
+}
+
+dimension: Custom dimension 11 {           # field: dimension11
+  type: string
+  sql: ${TABLE}.dimension11 ;;
+}
+
+dimension: Custom dimension 12 {           # field: dimension12
+  type: string
+  sql: ${TABLE}.dimension12 ;;
+}
+
+dimension: Custom dimension 13 {           # field: dimension13
+  type: string
+  sql: ${TABLE}.dimension13 ;;
+}
+
+dimension: Custom dimension 14 {           # field: dimension14
+  type: string
+  sql: ${TABLE}.dimension14 ;;
+}
+
+dimension: Custom dimension 15 {           # field: dimension15
+  type: string
+  sql: ${TABLE}.dimension15 ;;
+}
+
+dimension: Custom dimension 16 {           # field: dimension16
+  type: string
+  sql: ${TABLE}.dimension16 ;;
+}
+
+dimension: Custom dimension 17 {           # field: dimension17
+  type: string
+  sql: ${TABLE}.dimension17 ;;
+}
+
+dimension: Custom dimension 18 {           # field: dimension18
+  type: string
+  sql: ${TABLE}.dimension18 ;;
+}
+
+dimension: Custom dimension 19 {           # field: dimension19
+  type: string
+  sql: ${TABLE}.dimension19 ;;
+}
+
+dimension: Custom dimension 20 {           # field: dimension20
+  type: string
+  sql: ${TABLE}.dimension20 ;;
+}
+
+dimension: Custom dimension 21 {           # field: dimension21
+  type: string
+  sql: ${TABLE}.dimension21 ;;
+}
+
+dimension: Custom dimension 22 {           # field: dimension22
+  type: string
+  sql: ${TABLE}.dimension22 ;;
+}
+
+dimension: Custom dimension 23 {           # field: dimension23
+  type: string
+  sql: ${TABLE}.dimension23 ;;
+}
+
+dimension: Custom dimension 24 {           # field: dimension24
+  type: string
+  sql: ${TABLE}.dimension24 ;;
+}
+
+dimension: Custom dimension 25 {           # field: dimension25
+  type: string
+  sql: ${TABLE}.dimension25 ;;
+}
+
+dimension: Custom dimension 26 {           # field: dimension26
+  type: string
+  sql: ${TABLE}.dimension26 ;;
+}
+
+dimension: Custom dimension 27 {           # field: dimension27
+  type: string
+  sql: ${TABLE}.dimension27 ;;
+}
+
+dimension: Custom dimension 28 {           # field: dimension28
+  type: string
+  sql: ${TABLE}.dimension28 ;;
+}
+
+dimension: Custom dimension 29 {           # field: dimension29
+  type: string
+  sql: ${TABLE}.dimension29 ;;
+}
+
+dimension: Custom dimension 30 {           # field: dimension30
+  type: string
+  sql: ${TABLE}.dimension30 ;;
+}
+
+dimension: Custom dimension 31 {           # field: dimension31
+  type: string
+  sql: ${TABLE}.dimension31 ;;
+}
+
+dimension: Custom dimension 32 {           # field: dimension32
+  type: string
+  sql: ${TABLE}.dimension32 ;;
+}
+
+dimension: Custom dimension 33 {           # field: dimension33
+  type: string
+  sql: ${TABLE}.dimension33 ;;
+}
+
+dimension: Custom dimension 34 {           # field: dimension34
+  type: string
+  sql: ${TABLE}.dimension34 ;;
+}
+
+dimension: Custom dimension 35 {           # field: dimension35
+  type: string
+  sql: ${TABLE}.dimension35 ;;
+}
+
+dimension: Custom dimension 36 {           # field: dimension36
+  type: string
+  sql: ${TABLE}.dimension36 ;;
+}
+
+dimension: Custom dimension 37 {           # field: dimension37
+  type: string
+  sql: ${TABLE}.dimension37 ;;
+}
+
+dimension: Custom dimension 38 {           # field: dimension38
+  type: string
+  sql: ${TABLE}.dimension38 ;;
+}
+
+dimension: Custom dimension 39 {           # field: dimension39
+  type: string
+  sql: ${TABLE}.dimension39 ;;
+}
+
+dimension: Custom dimension 40 {           # field: dimension40
+  type: string
+  sql: ${TABLE}.dimension40 ;;
+}
+
+dimension: Custom dimension 41 {           # field: dimension41
+  type: string
+  sql: ${TABLE}.dimension41 ;;
+}
+
+dimension: Custom dimension 42 {           # field: dimension42
+  type: string
+  sql: ${TABLE}.dimension42 ;;
+}
+
+dimension: Custom dimension 43 {           # field: dimension43
+  type: string
+  sql: ${TABLE}.dimension43 ;;
+}
+
+dimension: Custom dimension 44 {           # field: dimension44
+  type: string
+  sql: ${TABLE}.dimension44 ;;
+}
+
+dimension: Custom dimension 45 {           # field: dimension45
+  type: string
+  sql: ${TABLE}.dimension45 ;;
+}
+
+dimension: Custom dimension 46 {           # field: dimension46
+  type: string
+  sql: ${TABLE}.dimension46 ;;
+}
+
+dimension: Custom dimension 47 {           # field: dimension47
+  type: string
+  sql: ${TABLE}.dimension47 ;;
+}
+
+dimension: Custom dimension 48 {           # field: dimension48
+  type: string
+  sql: ${TABLE}.dimension48 ;;
+}
+
+dimension: Custom dimension 49 {           # field: dimension49
+  type: string
+  sql: ${TABLE}.dimension49 ;;
+}
+
+dimension: Custom dimension 50 {           # field: dimension50
+  type: string
+  sql: ${TABLE}.dimension50 ;;
+}
+
+dimension: Custom dimension 51 {           # field: dimension51
+  type: string
+  sql: ${TABLE}.dimension51 ;;
+}
+
+dimension: Custom dimension 52 {           # field: dimension52
+  type: string
+  sql: ${TABLE}.dimension52 ;;
+}
+
+dimension: Custom dimension 53 {           # field: dimension53
+  type: string
+  sql: ${TABLE}.dimension53 ;;
+}
+
+dimension: Custom dimension 54 {           # field: dimension54
+  type: string
+  sql: ${TABLE}.dimension54 ;;
+}
+
+dimension: Custom dimension 55 {           # field: dimension55
+  type: string
+  sql: ${TABLE}.dimension55 ;;
+}
+
+dimension: Custom dimension 56 {           # field: dimension56
+  type: string
+  sql: ${TABLE}.dimension56 ;;
+}
+
+dimension: Custom dimension 57 {           # field: dimension57
+  type: string
+  sql: ${TABLE}.dimension57 ;;
+}
+
+dimension: Custom dimension 58 {           # field: dimension58
+  type: string
+  sql: ${TABLE}.dimension58 ;;
+}
+
+dimension: Custom dimension 59 {           # field: dimension59
+  type: string
+  sql: ${TABLE}.dimension59 ;;
+}
+
+dimension: Custom dimension 60 {           # field: dimension60
+  type: string
+  sql: ${TABLE}.dimension60 ;;
+}
+
+dimension: Custom dimension 61 {           # field: dimension61
+  type: string
+  sql: ${TABLE}.dimension61 ;;
+}
+
+dimension: Custom dimension 62 {           # field: dimension62
+  type: string
+  sql: ${TABLE}.dimension62 ;;
+}
+
+dimension: Custom dimension 63 {           # field: dimension63
+  type: string
+  sql: ${TABLE}.dimension63 ;;
+}
+
+dimension: Custom dimension 64 {           # field: dimension64
+  type: string
+  sql: ${TABLE}.dimension64 ;;
+}
+
+dimension: Custom dimension 65 {           # field: dimension65
+  type: string
+  sql: ${TABLE}.dimension65 ;;
+}
+
+dimension: Custom dimension 66 {           # field: dimension66
+  type: string
+  sql: ${TABLE}.dimension66 ;;
+}
+
+dimension: Custom dimension 67 {           # field: dimension67
+  type: string
+  sql: ${TABLE}.dimension67 ;;
+}
+
+dimension: Custom dimension 68 {           # field: dimension68
+  type: string
+  sql: ${TABLE}.dimension68 ;;
+}
+
+dimension: Custom dimension 69 {           # field: dimension69
+  type: string
+  sql: ${TABLE}.dimension69 ;;
+}
+
+dimension: Custom dimension 70 {           # field: dimension70
+  type: string
+  sql: ${TABLE}.dimension70 ;;
+}
+
+dimension: Custom dimension 71 {           # field: dimension71
+  type: string
+  sql: ${TABLE}.dimension71 ;;
+}
+
+dimension: Custom dimension 72 {           # field: dimension72
+  type: string
+  sql: ${TABLE}.dimension72 ;;
+}
+
+dimension: Custom dimension 73 {           # field: dimension73
+  type: string
+  sql: ${TABLE}.dimension73 ;;
+}
+
+dimension: Custom dimension 74 {           # field: dimension74
+  type: string
+  sql: ${TABLE}.dimension74 ;;
+}
+
+dimension: Custom dimension 75 {           # field: dimension75
+  type: string
+  sql: ${TABLE}.dimension75 ;;
+}
+
+dimension: Custom dimension 76 {           # field: dimension76
+  type: string
+  sql: ${TABLE}.dimension76 ;;
+}
+
+dimension: Custom dimension 77 {           # field: dimension77
+  type: string
+  sql: ${TABLE}.dimension77 ;;
+}
+
+dimension: Custom dimension 78 {           # field: dimension78
+  type: string
+  sql: ${TABLE}.dimension78 ;;
+}
+
+dimension: Custom dimension 79 {           # field: dimension79
+  type: string
+  sql: ${TABLE}.dimension79 ;;
+}
+
+dimension: Custom dimension 80 {           # field: dimension80
+  type: string
+  sql: ${TABLE}.dimension80 ;;
+}
+
+dimension: Custom dimension 81 {           # field: dimension81
+  type: string
+  sql: ${TABLE}.dimension81 ;;
+}
+
+dimension: Custom dimension 82 {           # field: dimension82
+  type: string
+  sql: ${TABLE}.dimension82 ;;
+}
+
+dimension: Custom dimension 83 {           # field: dimension83
+  type: string
+  sql: ${TABLE}.dimension83 ;;
+}
+
+dimension: Custom dimension 84 {           # field: dimension84
+  type: string
+  sql: ${TABLE}.dimension84 ;;
+}
+
+dimension: Custom dimension 85 {           # field: dimension85
+  type: string
+  sql: ${TABLE}.dimension85 ;;
+}
+
+dimension: Custom dimension 86 {           # field: dimension86
+  type: string
+  sql: ${TABLE}.dimension86 ;;
+}
+
+dimension: Custom dimension 87 {           # field: dimension87
+  type: string
+  sql: ${TABLE}.dimension87 ;;
+}
+
+dimension: Custom dimension 88 {           # field: dimension88
+  type: string
+  sql: ${TABLE}.dimension88 ;;
+}
+
+dimension: Custom dimension 89 {           # field: dimension89
+  type: string
+  sql: ${TABLE}.dimension89 ;;
+}
+
+dimension: Custom dimension 90 {           # field: dimension90
+  type: string
+  sql: ${TABLE}.dimension90 ;;
+}
+
+dimension: Custom dimension 91 {           # field: dimension91
+  type: string
+  sql: ${TABLE}.dimension91 ;;
+}
+
+dimension: Custom dimension 92 {           # field: dimension92
+  type: string
+  sql: ${TABLE}.dimension92 ;;
+}
+
+dimension: Custom dimension 93 {           # field: dimension93
+  type: string
+  sql: ${TABLE}.dimension93 ;;
+}
+
+dimension: Custom dimension 94 {           # field: dimension94
+  type: string
+  sql: ${TABLE}.dimension94 ;;
+}
+
+dimension: Custom dimension 95 {           # field: dimension95
+  type: string
+  sql: ${TABLE}.dimension95 ;;
+}
+
+dimension: Custom dimension 96 {           # field: dimension96
+  type: string
+  sql: ${TABLE}.dimension96 ;;
+}
+
+dimension: Custom dimension 97 {           # field: dimension97
+  type: string
+  sql: ${TABLE}.dimension97 ;;
+}
+
+dimension: Custom dimension 98 {           # field: dimension98
+  type: string
+  sql: ${TABLE}.dimension98 ;;
+}
+
+dimension: Custom dimension 99 {           # field: dimension99
+  type: string
+  sql: ${TABLE}.dimension99 ;;
+}
+
+dimension: Custom dimension 100 {           # field: dimension100
+  type: string
+  sql: ${TABLE}.dimension100 ;;
+}
+
+dimension: Custom dimension 101 {           # field: dimension101
+  type: string
+  sql: ${TABLE}.dimension101 ;;
+}
+
+dimension: Custom dimension 102 {           # field: dimension102
+  type: string
+  sql: ${TABLE}.dimension102 ;;
+}
+
+dimension: Custom dimension 103 {           # field: dimension103
+  type: string
+  sql: ${TABLE}.dimension103 ;;
+}
+
+dimension: Custom dimension 104 {           # field: dimension104
+  type: string
+  sql: ${TABLE}.dimension104 ;;
+}
+
+dimension: Custom dimension 105 {           # field: dimension105
+  type: string
+  sql: ${TABLE}.dimension105 ;;
+}
+
+dimension: Custom dimension 106 {           # field: dimension106
+  type: string
+  sql: ${TABLE}.dimension106 ;;
+}
+
+dimension: Custom dimension 107 {           # field: dimension107
+  type: string
+  sql: ${TABLE}.dimension107 ;;
+}
+
+dimension: Custom dimension 108 {           # field: dimension108
+  type: string
+  sql: ${TABLE}.dimension108 ;;
+}
+
+dimension: Custom dimension 109 {           # field: dimension109
+  type: string
+  sql: ${TABLE}.dimension109 ;;
+}
+
+dimension: Custom dimension 110 {           # field: dimension110
+  type: string
+  sql: ${TABLE}.dimension110 ;;
+}
+
+dimension: Custom dimension 111 {           # field: dimension111
+  type: string
+  sql: ${TABLE}.dimension111 ;;
+}
+
+dimension: Custom dimension 112 {           # field: dimension112
+  type: string
+  sql: ${TABLE}.dimension112 ;;
+}
+
+dimension: Custom dimension 113 {           # field: dimension113
+  type: string
+  sql: ${TABLE}.dimension113 ;;
+}
+
+dimension: Custom dimension 114 {           # field: dimension114
+  type: string
+  sql: ${TABLE}.dimension114 ;;
+}
+
+dimension: Custom dimension 115 {           # field: dimension115
+  type: string
+  sql: ${TABLE}.dimension115 ;;
+}
+
+dimension: Custom dimension 116 {           # field: dimension116
+  type: string
+  sql: ${TABLE}.dimension116 ;;
+}
+
+dimension: Custom dimension 117 {           # field: dimension117
+  type: string
+  sql: ${TABLE}.dimension117 ;;
+}
+
+dimension: Custom dimension 118 {           # field: dimension118
+  type: string
+  sql: ${TABLE}.dimension118 ;;
+}
+
+dimension: Custom dimension 119 {           # field: dimension119
+  type: string
+  sql: ${TABLE}.dimension119 ;;
+}
+
+dimension: Custom dimension 120 {           # field: dimension120
+  type: string
+  sql: ${TABLE}.dimension120 ;;
+}
+
+dimension: Custom dimension 121 {           # field: dimension121
+  type: string
+  sql: ${TABLE}.dimension121 ;;
+}
+
+dimension: Custom dimension 122 {           # field: dimension122
+  type: string
+  sql: ${TABLE}.dimension122 ;;
+}
+
+dimension: Custom dimension 123 {           # field: dimension123
+  type: string
+  sql: ${TABLE}.dimension123 ;;
+}
+
+dimension: Custom dimension 124 {           # field: dimension124
+  type: string
+  sql: ${TABLE}.dimension124 ;;
+}
+
+dimension: Custom dimension 125 {           # field: dimension125
+  type: string
+  sql: ${TABLE}.dimension125 ;;
+}
+
+dimension: Custom dimension 126 {           # field: dimension126
+  type: string
+  sql: ${TABLE}.dimension126 ;;
+}
+
+dimension: Custom dimension 127 {           # field: dimension127
+  type: string
+  sql: ${TABLE}.dimension127 ;;
+}
+
+dimension: Custom dimension 128 {           # field: dimension128
+  type: string
+  sql: ${TABLE}.dimension128 ;;
+}
+
+dimension: Custom dimension 129 {           # field: dimension129
+  type: string
+  sql: ${TABLE}.dimension129 ;;
+}
+
+dimension: Custom dimension 130 {           # field: dimension130
+  type: string
+  sql: ${TABLE}.dimension130 ;;
+}
+
+dimension: Custom dimension 131 {           # field: dimension131
+  type: string
+  sql: ${TABLE}.dimension131 ;;
+}
+
+dimension: Custom dimension 132 {           # field: dimension132
+  type: string
+  sql: ${TABLE}.dimension132 ;;
+}
+
+dimension: Custom dimension 133 {           # field: dimension133
+  type: string
+  sql: ${TABLE}.dimension133 ;;
+}
+
+dimension: Custom dimension 134 {           # field: dimension134
+  type: string
+  sql: ${TABLE}.dimension134 ;;
+}
+
+dimension: Custom dimension 135 {           # field: dimension135
+  type: string
+  sql: ${TABLE}.dimension135 ;;
+}
+
+dimension: Custom dimension 136 {           # field: dimension136
+  type: string
+  sql: ${TABLE}.dimension136 ;;
+}
+
+dimension: Custom dimension 137 {           # field: dimension137
+  type: string
+  sql: ${TABLE}.dimension137 ;;
+}
+
+dimension: Custom dimension 138 {           # field: dimension138
+  type: string
+  sql: ${TABLE}.dimension138 ;;
+}
+
+dimension: Custom dimension 139 {           # field: dimension139
+  type: string
+  sql: ${TABLE}.dimension139 ;;
+}
+
+dimension: Custom dimension 140 {           # field: dimension140
+  type: string
+  sql: ${TABLE}.dimension140 ;;
+}
+
+dimension: Custom dimension 141 {           # field: dimension141
+  type: string
+  sql: ${TABLE}.dimension141 ;;
+}
+
+dimension: Custom dimension 142 {           # field: dimension142
+  type: string
+  sql: ${TABLE}.dimension142 ;;
+}
+
+dimension: Custom dimension 143 {           # field: dimension143
+  type: string
+  sql: ${TABLE}.dimension143 ;;
+}
+
+dimension: Custom dimension 144 {           # field: dimension144
+  type: string
+  sql: ${TABLE}.dimension144 ;;
+}
+
+dimension: Custom dimension 145 {           # field: dimension145
+  type: string
+  sql: ${TABLE}.dimension145 ;;
+}
+
+dimension: Custom dimension 146 {           # field: dimension146
+  type: string
+  sql: ${TABLE}.dimension146 ;;
+}
+
+dimension: Custom dimension 147 {           # field: dimension147
+  type: string
+  sql: ${TABLE}.dimension147 ;;
+}
+
+dimension: Custom dimension 148 {           # field: dimension148
+  type: string
+  sql: ${TABLE}.dimension148 ;;
+}
+
+dimension: Custom dimension 149 {           # field: dimension149
+  type: string
+  sql: ${TABLE}.dimension149 ;;
+}
+
+dimension: Custom dimension 150 {           # field: dimension150
+  type: string
+  sql: ${TABLE}.dimension150 ;;
+}
+
+dimension: Custom dimension 151 {           # field: dimension151
+  type: string
+  sql: ${TABLE}.dimension151 ;;
+}
+
+dimension: Custom dimension 152 {           # field: dimension152
+  type: string
+  sql: ${TABLE}.dimension152 ;;
+}
+
+dimension: Custom dimension 153 {           # field: dimension153
+  type: string
+  sql: ${TABLE}.dimension153 ;;
+}
+
+dimension: Custom dimension 154 {           # field: dimension154
+  type: string
+  sql: ${TABLE}.dimension154 ;;
+}
+
+dimension: Custom dimension 155 {           # field: dimension155
+  type: string
+  sql: ${TABLE}.dimension155 ;;
+}
+
+dimension: Custom dimension 156 {           # field: dimension156
+  type: string
+  sql: ${TABLE}.dimension156 ;;
+}
+
+dimension: Custom dimension 157 {           # field: dimension157
+  type: string
+  sql: ${TABLE}.dimension157 ;;
+}
+
+dimension: Custom dimension 158 {           # field: dimension158
+  type: string
+  sql: ${TABLE}.dimension158 ;;
+}
+
+dimension: Custom dimension 159 {           # field: dimension159
+  type: string
+  sql: ${TABLE}.dimension159 ;;
+}
+
+dimension: Custom dimension 160 {           # field: dimension160
+  type: string
+  sql: ${TABLE}.dimension160 ;;
+}
+
+dimension: Custom dimension 161 {           # field: dimension161
+  type: string
+  sql: ${TABLE}.dimension161 ;;
+}
+
+dimension: Custom dimension 162 {           # field: dimension162
+  type: string
+  sql: ${TABLE}.dimension162 ;;
+}
+
+dimension: Custom dimension 163 {           # field: dimension163
+  type: string
+  sql: ${TABLE}.dimension163 ;;
+}
+
+dimension: Custom dimension 164 {           # field: dimension164
+  type: string
+  sql: ${TABLE}.dimension164 ;;
+}
+
+dimension: Custom dimension 165 {           # field: dimension165
+  type: string
+  sql: ${TABLE}.dimension165 ;;
+}
+
+dimension: Custom dimension 166 {           # field: dimension166
+  type: string
+  sql: ${TABLE}.dimension166 ;;
+}
+
+dimension: Custom dimension 167 {           # field: dimension167
+  type: string
+  sql: ${TABLE}.dimension167 ;;
+}
+
+dimension: Custom dimension 168 {           # field: dimension168
+  type: string
+  sql: ${TABLE}.dimension168 ;;
+}
+
+dimension: Custom dimension 169 {           # field: dimension169
+  type: string
+  sql: ${TABLE}.dimension169 ;;
+}
+
+dimension: Custom dimension 170 {           # field: dimension170
+  type: string
+  sql: ${TABLE}.dimension170 ;;
+}
+
+dimension: Custom dimension 171 {           # field: dimension171
+  type: string
+  sql: ${TABLE}.dimension171 ;;
+}
+
+dimension: Custom dimension 172 {           # field: dimension172
+  type: string
+  sql: ${TABLE}.dimension172 ;;
+}
+
+dimension: Custom dimension 173 {           # field: dimension173
+  type: string
+  sql: ${TABLE}.dimension173 ;;
+}
+
+dimension: Custom dimension 174 {           # field: dimension174
+  type: string
+  sql: ${TABLE}.dimension174 ;;
+}
+
+dimension: Custom dimension 175 {           # field: dimension175
+  type: string
+  sql: ${TABLE}.dimension175 ;;
+}
+
+dimension: Custom dimension 176 {           # field: dimension176
+  type: string
+  sql: ${TABLE}.dimension176 ;;
+}
+
+dimension: Custom dimension 177 {           # field: dimension177
+  type: string
+  sql: ${TABLE}.dimension177 ;;
+}
+
+dimension: Custom dimension 178 {           # field: dimension178
+  type: string
+  sql: ${TABLE}.dimension178 ;;
+}
+
+dimension: Custom dimension 179 {           # field: dimension179
+  type: string
+  sql: ${TABLE}.dimension179 ;;
+}
+
+dimension: Custom dimension 180 {           # field: dimension180
+  type: string
+  sql: ${TABLE}.dimension180 ;;
+}
+
+dimension: Custom dimension 181 {           # field: dimension181
+  type: string
+  sql: ${TABLE}.dimension181 ;;
+}
+
+dimension: Custom dimension 182 {           # field: dimension182
+  type: string
+  sql: ${TABLE}.dimension182 ;;
+}
+
+dimension: Custom dimension 183 {           # field: dimension183
+  type: string
+  sql: ${TABLE}.dimension183 ;;
+}
+
+dimension: Custom dimension 184 {           # field: dimension184
+  type: string
+  sql: ${TABLE}.dimension184 ;;
+}
+
+dimension: Custom dimension 185 {           # field: dimension185
+  type: string
+  sql: ${TABLE}.dimension185 ;;
+}
+
+dimension: Custom dimension 186 {           # field: dimension186
+  type: string
+  sql: ${TABLE}.dimension186 ;;
+}
+
+dimension: Custom dimension 187 {           # field: dimension187
+  type: string
+  sql: ${TABLE}.dimension187 ;;
+}
+
+dimension: Custom dimension 188 {           # field: dimension188
+  type: string
+  sql: ${TABLE}.dimension188 ;;
+}
+
+dimension: Custom dimension 189 {           # field: dimension189
+  type: string
+  sql: ${TABLE}.dimension189 ;;
+}
+
+dimension: Custom dimension 190 {           # field: dimension190
+  type: string
+  sql: ${TABLE}.dimension190 ;;
+}
+
+dimension: Custom dimension 191 {           # field: dimension191
+  type: string
+  sql: ${TABLE}.dimension191 ;;
+}
+
+dimension: Custom dimension 192 {           # field: dimension192
+  type: string
+  sql: ${TABLE}.dimension192 ;;
+}
+
+dimension: Custom dimension 193 {           # field: dimension193
+  type: string
+  sql: ${TABLE}.dimension193 ;;
+}
+
+dimension: Custom dimension 194 {           # field: dimension194
+  type: string
+  sql: ${TABLE}.dimension194 ;;
+}
+
+dimension: Custom dimension 195 {           # field: dimension195
+  type: string
+  sql: ${TABLE}.dimension195 ;;
+}
+
+dimension: Custom dimension 196 {           # field: dimension196
+  type: string
+  sql: ${TABLE}.dimension196 ;;
+}
+
+dimension: Custom dimension 197 {           # field: dimension197
+  type: string
+  sql: ${TABLE}.dimension197 ;;
+}
+
+dimension: Custom dimension 198 {           # field: dimension198
+  type: string
+  sql: ${TABLE}.dimension198 ;;
+}
+
+dimension: Custom dimension 199 {           # field: dimension199
+  type: string
+  sql: ${TABLE}.dimension199 ;;
+}
+
+dimension: Custom dimension 200 {           # field: dimension200
+  type: string
+  sql: ${TABLE}.dimension200 ;;
+}
+
+dimension: DBM Advertiser (GA Model) {           # field: dbmClickAdvertiser
+  type: string
+  sql: ${TABLE}.dbmClickAdvertiser ;;
+}
+
+dimension: DBM Advertiser ID (GA Model) {           # field: dbmClickAdvertiserId
+  type: string
+  sql: ${TABLE}.dbmClickAdvertiserId ;;
+}
+
+dimension: DBM Creative ID (GA Model) {           # field: dbmClickCreativeId
+  type: string
+  sql: ${TABLE}.dbmClickCreativeId ;;
+}
+
+dimension: DBM Exchange (GA Model) {           # field: dbmClickExchange
+  type: string
+  sql: ${TABLE}.dbmClickExchange ;;
+}
+
+dimension: DBM Exchange ID (GA Model) {           # field: dbmClickExchangeId
+  type: string
+  sql: ${TABLE}.dbmClickExchangeId ;;
+}
+
+dimension: DBM Insertion Order (GA Model) {           # field: dbmClickInsertionOrder
+  type: string
+  sql: ${TABLE}.dbmClickInsertionOrder ;;
+}
+
+dimension: DBM Insertion Order ID (GA Model) {           # field: dbmClickInsertionOrderId
+  type: string
+  sql: ${TABLE}.dbmClickInsertionOrderId ;;
+}
+
+dimension: DBM Line Item (GA Model) {           # field: dbmClickLineItem
+  type: string
+  sql: ${TABLE}.dbmClickLineItem ;;
+}
+
+dimension: DBM Line Item ID (GA Model) {           # field: dbmClickLineItemId
+  type: string
+  sql: ${TABLE}.dbmClickLineItemId ;;
+}
+
+dimension: DBM Site (GA Model) {           # field: dbmClickSite
+  type: string
+  sql: ${TABLE}.dbmClickSite ;;
+}
+
+dimension: DBM Site ID (GA Model) {           # field: dbmClickSiteId
+  type: string
+  sql: ${TABLE}.dbmClickSiteId ;;
+}
+
+dimension: DBM Last Advertiser (DCM Model) {           # field: dbmLastEventAdvertiser
+  type: string
+  sql: ${TABLE}.dbmLastEventAdvertiser ;;
+}
+
+dimension: DBM Last Advertiser ID (DCM Model) {           # field: dbmLastEventAdvertiserId
+  type: string
+  sql: ${TABLE}.dbmLastEventAdvertiserId ;;
+}
+
+dimension: DBM Last Creative ID (DCM Model) {           # field: dbmLastEventCreativeId
+  type: string
+  sql: ${TABLE}.dbmLastEventCreativeId ;;
+}
+
+dimension: DBM Last Exchange (DCM Model) {           # field: dbmLastEventExchange
+  type: string
+  sql: ${TABLE}.dbmLastEventExchange ;;
+}
+
+dimension: DBM Last Exchange ID (DCM Model) {           # field: dbmLastEventExchangeId
+  type: string
+  sql: ${TABLE}.dbmLastEventExchangeId ;;
+}
+
+dimension: DBM Last Insertion Order (DCM Model) {           # field: dbmLastEventInsertionOrder
+  type: string
+  sql: ${TABLE}.dbmLastEventInsertionOrder ;;
+}
+
+dimension: DBM Last Insertion Order ID (DCM Model) {           # field: dbmLastEventInsertionOrderId
+  type: string
+  sql: ${TABLE}.dbmLastEventInsertionOrderId ;;
+}
+
+dimension: DBM Last Line Item (DCM Model) {           # field: dbmLastEventLineItem
+  type: string
+  sql: ${TABLE}.dbmLastEventLineItem ;;
+}
+
+dimension: DBM Last Line Item ID (DCM Model) {           # field: dbmLastEventLineItemId
+  type: string
+  sql: ${TABLE}.dbmLastEventLineItemId ;;
+}
+
+dimension: DBM Last Site (DCM Model) {           # field: dbmLastEventSite
+  type: string
+  sql: ${TABLE}.dbmLastEventSite ;;
+}
+
+dimension: DBM Last Site ID (DCM Model) {           # field: dbmLastEventSiteId
+  type: string
+  sql: ${TABLE}.dbmLastEventSiteId ;;
+}
+
+dimension: DFA Ad {           # field: dcmLastEventAd
+  type: string
+  sql: ${TABLE}.dcmLastEventAd ;;
+}
+
+dimension: DFA Ad ID (DFA Model) {           # field: dcmLastEventAdId
+  type: string
+  sql: ${TABLE}.dcmLastEventAdId ;;
+}
+
+dimension: DFA Ad Type (DFA Model) {           # field: dcmLastEventAdType
+  type: string
+  sql: ${TABLE}.dcmLastEventAdType ;;
+}
+
+dimension: DFA Ad Type ID (DFA Model) {           # field: dcmLastEventAdTypeId
+  type: string
+  sql: ${TABLE}.dcmLastEventAdTypeId ;;
+}
+
+dimension: DFA Advertiser (DFA Model) {           # field: dcmLastEventAdvertiser
+  type: string
+  sql: ${TABLE}.dcmLastEventAdvertiser ;;
+}
+
+dimension: DFA Advertiser ID (DFA Model) {           # field: dcmLastEventAdvertiserId
+  type: string
+  sql: ${TABLE}.dcmLastEventAdvertiserId ;;
+}
+
+dimension: DFA Attribution Type (DFA Model) {           # field: dcmLastEventAttributionType
+  type: string
+  sql: ${TABLE}.dcmLastEventAttributionType ;;
+}
+
+dimension: DFA Campaign (DFA Model) {           # field: dcmLastEventCampaign
+  type: string
+  sql: ${TABLE}.dcmLastEventCampaign ;;
+}
+
+dimension: DFA Campaign ID (DFA Model) {           # field: dcmLastEventCampaignId
+  type: string
+  sql: ${TABLE}.dcmLastEventCampaignId ;;
+}
+
+dimension: DFA Creative ID (DFA Model) {           # field: dcmLastEventCreativeId
+  type: string
+  sql: ${TABLE}.dcmLastEventCreativeId ;;
+}
+
+dimension: DFA Creative (DFA Model) {           # field: dcmLastEventCreative
+  type: string
+  sql: ${TABLE}.dcmLastEventCreative ;;
+}
+
+dimension: DFA Rendering ID (DFA Model) {           # field: dcmLastEventRenderingId
+  type: string
+  sql: ${TABLE}.dcmLastEventRenderingId ;;
+}
+
+dimension: DFA Creative Type (DFA Model) {           # field: dcmLastEventCreativeType
+  type: string
+  sql: ${TABLE}.dcmLastEventCreativeType ;;
+}
+
+dimension: DFA Creative Type ID (DFA Model) {           # field: dcmLastEventCreativeTypeId
+  type: string
+  sql: ${TABLE}.dcmLastEventCreativeTypeId ;;
+}
+
+dimension: DFA Creative Version (DFA Model) {           # field: dcmLastEventCreativeVersion
+  type: string
+  sql: ${TABLE}.dcmLastEventCreativeVersion ;;
+}
+
+dimension: DFA Site (DFA Model) {           # field: dcmLastEventSite
+  type: string
+  sql: ${TABLE}.dcmLastEventSite ;;
+}
+
+dimension: DFA Site ID (DFA Model) {           # field: dcmLastEventSiteId
+  type: string
+  sql: ${TABLE}.dcmLastEventSiteId ;;
+}
+
+dimension: DFA Placement (DFA Model) {           # field: dcmLastEventSitePlacement
+  type: string
+  sql: ${TABLE}.dcmLastEventSitePlacement ;;
+}
+
+dimension: DFA Placement ID (DFA Model) {           # field: dcmLastEventSitePlacementId
+  type: string
+  sql: ${TABLE}.dcmLastEventSitePlacementId ;;
+}
+
+dimension: DFA Floodlight Configuration ID (DFA Model) {           # field: dcmLastEventSpotId
+  type: string
+  sql: ${TABLE}.dcmLastEventSpotId ;;
+}
+
+dimension: DFA Ad (GA Model) {           # field: dcmClickAd
+  type: string
+  sql: ${TABLE}.dcmClickAd ;;
+}
+
+dimension: DFA Ad ID (GA Model) {           # field: dcmClickAdId
+  type: string
+  sql: ${TABLE}.dcmClickAdId ;;
+}
+
+dimension: DFA Ad Type (GA Model) {           # field: dcmClickAdType
+  type: string
+  sql: ${TABLE}.dcmClickAdType ;;
+}
+
+dimension: DFA Ad Type ID {           # field: dcmClickAdTypeId
+  type: string
+  sql: ${TABLE}.dcmClickAdTypeId ;;
+}
+
+dimension: DFA Advertiser (GA Model) {           # field: dcmClickAdvertiser
+  type: string
+  sql: ${TABLE}.dcmClickAdvertiser ;;
+}
+
+dimension: DFA Advertiser ID (GA Model) {           # field: dcmClickAdvertiserId
+  type: string
+  sql: ${TABLE}.dcmClickAdvertiserId ;;
+}
+
+dimension: DFA Campaign (GA Model) {           # field: dcmClickCampaign
+  type: string
+  sql: ${TABLE}.dcmClickCampaign ;;
+}
+
+dimension: DFA Campaign ID (GA Model) {           # field: dcmClickCampaignId
+  type: string
+  sql: ${TABLE}.dcmClickCampaignId ;;
+}
+
+dimension: DFA Creative ID (GA Model) {           # field: dcmClickCreativeId
+  type: string
+  sql: ${TABLE}.dcmClickCreativeId ;;
+}
+
+dimension: DFA Creative (GA Model) {           # field: dcmClickCreative
+  type: string
+  sql: ${TABLE}.dcmClickCreative ;;
+}
+
+dimension: DFA Rendering ID (GA Model) {           # field: dcmClickRenderingId
+  type: string
+  sql: ${TABLE}.dcmClickRenderingId ;;
+}
+
+dimension: DFA Creative Type (GA Model) {           # field: dcmClickCreativeType
+  type: string
+  sql: ${TABLE}.dcmClickCreativeType ;;
+}
+
+dimension: DFA Creative Type ID (GA Model) {           # field: dcmClickCreativeTypeId
+  type: string
+  sql: ${TABLE}.dcmClickCreativeTypeId ;;
+}
+
+dimension: DFA Creative Version (GA Model) {           # field: dcmClickCreativeVersion
+  type: string
+  sql: ${TABLE}.dcmClickCreativeVersion ;;
+}
+
+dimension: DFA Site (GA Model) {           # field: dcmClickSite
+  type: string
+  sql: ${TABLE}.dcmClickSite ;;
+}
+
+dimension: DFA Site ID (GA Model) {           # field: dcmClickSiteId
+  type: string
+  sql: ${TABLE}.dcmClickSiteId ;;
+}
+
+dimension: DFA Placement (GA Model) {           # field: dcmClickSitePlacement
+  type: string
+  sql: ${TABLE}.dcmClickSitePlacement ;;
+}
+
+dimension: DFA Placement ID (GA Model) {           # field: dcmClickSitePlacementId
+  type: string
+  sql: ${TABLE}.dcmClickSitePlacementId ;;
+}
+
+dimension: DFA Floodlight Configuration ID (GA Model) {           # field: dcmClickSpotId
+  type: string
+  sql: ${TABLE}.dcmClickSpotId ;;
+}
+
+dimension: DFA Activity {           # field: dcmFloodlightActivity
+  type: string
+  sql: ${TABLE}.dcmFloodlightActivity ;;
+}
+
+dimension: DFA Activity and Group {           # field: dcmFloodlightActivityAndGroup
+  type: string
+  sql: ${TABLE}.dcmFloodlightActivityAndGroup ;;
+}
+
+dimension: DFA Activity Group {           # field: dcmFloodlightActivityGroup
+  type: string
+  sql: ${TABLE}.dcmFloodlightActivityGroup ;;
+}
+
+dimension: DFA Activity Group ID {           # field: dcmFloodlightActivityGroupId
+  type: string
+  sql: ${TABLE}.dcmFloodlightActivityGroupId ;;
+}
+
+dimension: DFA Activity ID {           # field: dcmFloodlightActivityId
+  type: string
+  sql: ${TABLE}.dcmFloodlightActivityId ;;
+}
+
+dimension: DFA Advertiser ID {           # field: dcmFloodlightAdvertiserId
+  type: string
+  sql: ${TABLE}.dcmFloodlightAdvertiserId ;;
+}
+
+dimension: DFA Floodlight Configuration ID {           # field: dcmFloodlightSpotId
+  type: string
+  sql: ${TABLE}.dcmFloodlightSpotId ;;
+}
+
+dimension: SA360 Ad Group {           # field: dsAdGroup
+  type: string
+  sql: ${TABLE}.dsAdGroup ;;
+}
+
+dimension: SA360 Ad Group ID {           # field: dsAdGroupId
+  type: string
+  sql: ${TABLE}.dsAdGroupId ;;
+}
+
+dimension: SA360 Advertiser {           # field: dsAdvertiser
+  type: string
+  sql: ${TABLE}.dsAdvertiser ;;
+}
+
+dimension: SA360 Advertiser ID {           # field: dsAdvertiserId
+  type: string
+  sql: ${TABLE}.dsAdvertiserId ;;
+}
+
+dimension: SA360 Agency {           # field: dsAgency
+  type: string
+  sql: ${TABLE}.dsAgency ;;
+}
+
+dimension: SA360 Agency ID {           # field: dsAgencyId
+  type: string
+  sql: ${TABLE}.dsAgencyId ;;
+}
+
+dimension: SA360 Campaign {           # field: dsCampaign
+  type: string
+  sql: ${TABLE}.dsCampaign ;;
+}
+
+dimension: SA360 Campaign ID {           # field: dsCampaignId
+  type: string
+  sql: ${TABLE}.dsCampaignId ;;
+}
+
+dimension: SA360 Engine Account {           # field: dsEngineAccount
+  type: string
+  sql: ${TABLE}.dsEngineAccount ;;
+}
+
+dimension: SA360 Engine Account ID {           # field: dsEngineAccountId
+  type: string
+  sql: ${TABLE}.dsEngineAccountId ;;
+}
+
+dimension: SA360 Keyword {           # field: dsKeyword
+  type: string
+  sql: ${TABLE}.dsKeyword ;;
+}
+
+dimension: SA360 Keyword ID {           # field: dsKeywordId
+  type: string
+  sql: ${TABLE}.dsKeywordId ;;
+}
+
+dimension: Is sampled {           # field: isSampled
+  type: string
+  sql: ${TABLE}.isSampled ;;
+}
+
+dimension: Next page path {           # field: NextPagePath
+  type: string
+  sql: ${TABLE}.NextPagePath ;;
+}
+
+dimension: Offsite social action user {           # field: socialActivityUserHandle
+  type: string
+  sql: ${TABLE}.socialActivityUserHandle ;;
+}
+
+dimension: Offsite social action user profile URL {           # field: socialActivityUserProfileUrl
+  type: string
+  sql: ${TABLE}.socialActivityUserProfileUrl ;;
+}
+
+dimension: Offsite social action title {           # field: socialActivityDisplayName
+  type: string
+  sql: ${TABLE}.socialActivityDisplayName ;;
+}
+
+dimension: Offsite social action URL {           # field: socialActivityEndorsingUrl
+  type: string
+  sql: ${TABLE}.socialActivityEndorsingUrl ;;
+}
+
+dimension: Correlation Model ID {           # field: correlationModelId
+  type: string
+  sql: ${TABLE}.correlationModelId ;;
+}
+
+dimension: Offsite social action type {           # field: socialActivityAction
+  type: string
+  sql: ${TABLE}.socialActivityAction ;;
+}
+
+dimension: Related Product Name {           # field: relatedProductName
+  type: string
+  sql: ${TABLE}.relatedProductName ;;
+}
+
+dimension: Related Product Variation {           # field: relatedProductVariation
+  type: string
+  sql: ${TABLE}.relatedProductVariation ;;
+}
+
+dimension: Related Product ID {           # field: relatedProductId
+  type: string
+  sql: ${TABLE}.relatedProductId ;;
+}
+
+dimension: Queried Product Variation {           # field: queryProductVariation
+  type: string
+  sql: ${TABLE}.queryProductVariation ;;
+}
+
+dimension: Queried Product Name {           # field: queryProductName
+  type: string
+  sql: ${TABLE}.queryProductName ;;
+}
+
+dimension: Queried Product ID {           # field: queryProductId
+  type: string
+  sql: ${TABLE}.queryProductId ;;
+}
+
+dimension: Offsite social action post content {           # field: socialActivityPost
+  type: string
+  sql: ${TABLE}.socialActivityPost ;;
+}
